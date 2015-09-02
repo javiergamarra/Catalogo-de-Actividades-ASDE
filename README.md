@@ -5,6 +5,7 @@ Aplicación para la Asociación de Scouts de España
 ## Todo
 
 * Add fragment examples
+* Order packages
 * Add testing architecture
 * Connect with travis-ci
 * Use RxJava instead of EventBus
