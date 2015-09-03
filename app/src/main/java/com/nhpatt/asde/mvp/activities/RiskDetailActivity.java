@@ -1,11 +1,13 @@
-package com.nhpatt.asde.activities;
+package com.nhpatt.asde.mvp.activities;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import com.nhpatt.asde.R;
-import com.nhpatt.asde.presenters.RiskDetailPresenter;
+import com.nhpatt.asde.activities.AbstractActivity;
+import com.nhpatt.asde.mvp.presenters.RiskDetailPresenter;
+import com.nhpatt.asde.mvp.views.RiskDetailView;
 
 /**
  * @author Javier Gamarra

@@ -1,9 +1,8 @@
-package com.nhpatt.asde.presenters;
+package com.nhpatt.asde.async.interactors;
 
 import com.nhpatt.asde.async.EventBusUtil;
-import com.nhpatt.asde.interactors.AbstractInteractor;
+import com.nhpatt.asde.async.services.GitHubService;
 import com.nhpatt.asde.models.Contributor;
-import com.nhpatt.asde.services.GitHubService;
 
 import java.io.IOException;
 import java.util.List;
@@ -30,5 +29,7 @@ public class SearchRiskInteractor extends AbstractInteractor {
         List<Contributor> contributors = call.execute().body();
 
         EventBusUtil.post(String.valueOf(contributors.get(0)));
+
+
     }
 }

@@ -1,7 +1,7 @@
-package com.nhpatt.asde.presenters;
+package com.nhpatt.asde.mvp.presenters;
 
-import com.nhpatt.asde.activities.MainView;
-import com.nhpatt.asde.interactors.MainInteractor;
+import com.nhpatt.asde.mvp.views.MainView;
+import com.nhpatt.asde.async.interactors.MainInteractor;
 
 import de.greenrobot.event.Subscribe;
 

@@ -1,4 +1,4 @@
-package com.nhpatt.asde.activities;
+package com.nhpatt.asde.mvp.views;
 
 public interface MainView {
 

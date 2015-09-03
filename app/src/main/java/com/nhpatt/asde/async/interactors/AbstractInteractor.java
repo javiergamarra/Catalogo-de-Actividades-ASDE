@@ -1,4 +1,4 @@
-package com.nhpatt.asde.interactors;
+package com.nhpatt.asde.async.interactors;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

@@ -5,7 +5,6 @@ Aplicación para la Asociación de Scouts de España
 ## Todo
 
 * Add fragment examples
-* Order packages
 * Add testing architecture
 * Connect with travis-ci
 * Use RxJava instead of EventBus
@@ -15,3 +14,4 @@ Aplicación para la Asociación de Scouts de España
 	* Use Cases? 
 	* Repositories/Providers?
 	* Domain & response model?
+	* Packages by domain?

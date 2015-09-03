@@ -1,6 +1,7 @@
-package com.nhpatt.asde.presenters;
+package com.nhpatt.asde.mvp.presenters;
 
-import com.nhpatt.asde.activities.RiskDetailView;
+import com.nhpatt.asde.async.interactors.SearchRiskInteractor;
+import com.nhpatt.asde.mvp.views.RiskDetailView;
 
 import de.greenrobot.event.Subscribe;
 

@@ -1,8 +1,8 @@
-package com.nhpatt.asde.interactors;
+package com.nhpatt.asde.async.interactors;
 
 import com.nhpatt.asde.async.EventBusUtil;
 import com.nhpatt.asde.models.Contributor;
-import com.nhpatt.asde.services.GitHubService;
+import com.nhpatt.asde.async.services.GitHubService;
 
 import java.io.IOException;
 import java.util.List;

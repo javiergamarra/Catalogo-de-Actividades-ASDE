@@ -1,10 +1,12 @@
-package com.nhpatt.asde.activities;
+package com.nhpatt.asde.mvp.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 
 import com.nhpatt.asde.R;
-import com.nhpatt.asde.presenters.MainPresenter;
+import com.nhpatt.asde.activities.AbstractActivity;
+import com.nhpatt.asde.mvp.presenters.MainPresenter;
+import com.nhpatt.asde.mvp.views.MainView;
 
 public class MainActivity extends AbstractActivity<MainPresenter> implements MainView {
 
