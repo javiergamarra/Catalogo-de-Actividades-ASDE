@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 
 import com.nhpatt.asde.R;
-import com.nhpatt.asde.activities.AbstractActivity;
 import com.nhpatt.asde.mvp.presenters.MainPresenter;
 import com.nhpatt.asde.mvp.views.MainView;
 
