@@ -1,6 +1,6 @@
 package com.nhpatt.asde.async.services;
 
-import com.nhpatt.asde.models.Commit;
+import com.nhpatt.asde.models.Commits;
 import com.nhpatt.asde.models.Contributor;
 
 import java.util.List;
@@ -17,7 +17,7 @@ public interface GitHubService {
 
 
     @GET("/repos/{owner}/{repo}/commits")
-    Call<List<Commit>> commits(
+    Call<List<Commits>> commits(
             @Path("owner") String owner,
             @Path("repo") String repo);
 

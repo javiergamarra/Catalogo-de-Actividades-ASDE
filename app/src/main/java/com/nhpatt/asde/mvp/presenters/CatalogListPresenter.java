@@ -1,10 +1,12 @@
 package com.nhpatt.asde.mvp.presenters;
 
 import com.nhpatt.asde.async.interactors.SearchCatalogListInteractor;
-import com.nhpatt.asde.models.Commit;
+import com.nhpatt.asde.models.Commits;
 import com.nhpatt.asde.mvp.views.CatalogListView;
 
 import java.util.List;
+
+import de.greenrobot.event.Subscribe;
 
 /**
  * @author Hugo Nebreda
@@ -17,13 +19,12 @@ public class CatalogListPresenter extends PresenterImpl {
         this.catalogListView = catalogListView;
     }
 
-
     public void searchCatalogList() {
         new SearchCatalogListInteractor().execute();
     }
 
-    //    @Subscribe
-    public void catalogListRetrieved(List<Commit> object) {
+    @Subscribe
+    public void catalogListRetrieved(List<Commits> object) {
         catalogListView.show(object);
     }
 }

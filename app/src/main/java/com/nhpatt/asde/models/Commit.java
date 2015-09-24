@@ -1,25 +1,17 @@
 package com.nhpatt.asde.models;
 
+/**
+ * @author Javier Gamarra
+ */
 public class Commit {
-    private final String author;
-    private final String message;
-    private final String date;
+    private Author author;
 
-    public Commit(String author, String message, String date) {
-        this.author = author;
-        this.message = message;
-        this.date = date;
-    }
-
-    public String getAuthor() {
+    public Author getAuthor() {
         return author;
     }
 
-    public String getMessage() {
-        return message;
+    public void setAuthor(Author author) {
+        this.author = author;
     }
 
-    public String getDate() {
-        return date;
-    }
 }

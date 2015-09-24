@@ -8,7 +8,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.nhpatt.asde.R;
-import com.nhpatt.asde.models.Commit;
+import com.nhpatt.asde.models.Commits;
 import com.nhpatt.asde.mvp.presenters.CatalogListPresenter;
 import com.nhpatt.asde.mvp.views.CatalogListView;
 
@@ -46,11 +46,11 @@ public class CatalogListActivity extends AbstractActivity<CatalogListPresenter> 
     }
 
     @Override
-    public void show(List<Commit> catalogList) {
+    public void show(List<Commits> catalogList) {
         List<String> auxList = new ArrayList<>();
 
         for (int position = 0; position < catalogList.size(); position++) {
-            auxList.add(catalogList.get(position).getMessage());
+            auxList.add(catalogList.get(position).getComments_url());
         }
 
         ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, auxList);

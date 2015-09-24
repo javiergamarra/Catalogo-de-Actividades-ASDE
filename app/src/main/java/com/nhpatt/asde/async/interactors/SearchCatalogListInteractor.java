@@ -2,7 +2,7 @@ package com.nhpatt.asde.async.interactors;
 
 import com.nhpatt.asde.async.EventBusUtil;
 import com.nhpatt.asde.async.services.GitHubService;
-import com.nhpatt.asde.models.Commit;
+import com.nhpatt.asde.models.Commits;
 
 import java.io.IOException;
 import java.util.List;
@@ -17,6 +17,7 @@ import retrofit.Retrofit;
 public class SearchCatalogListInteractor extends AbstractInteractor {
     @Override
     public void runOnBackground() throws IOException {
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://api.github.com")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -24,10 +25,9 @@ public class SearchCatalogListInteractor extends AbstractInteractor {
 
         GitHubService github = retrofit.create(GitHubService.class);
 
+        Call<List<Commits>> call = github.commits("nhpatt", "Catalogo-de-Actividades-ASDE");
 
-        Call<List<Commit>> call = github.commits("nhpatt", "Catalogo-de-Actividades-ASDE");
-
-        List<Commit> commits = call.execute().body();
+        List<Commits> commits = call.execute().body();
 
         EventBusUtil.post(commits);
 
