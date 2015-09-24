@@ -24,16 +24,5 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".mvp.activities.ItemListActivity"
-            android:label="@string/title_item_list" />
-        <activity
-            android:name=".mvp.activities.ItemDetailActivity"
-            android:label="@string/title_item_detail"
-            android:parentActivityName=".mvp.activities.ItemListActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".mvp.activities.ItemListActivity" />
-        </activity>
     </application>
 </manifest>
