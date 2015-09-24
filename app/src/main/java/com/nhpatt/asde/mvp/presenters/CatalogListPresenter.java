@@ -6,8 +6,6 @@ import com.nhpatt.asde.mvp.views.CatalogListView;
 
 import java.util.List;
 
-import de.greenrobot.event.Subscribe;
-
 /**
  * @author Hugo Nebreda
  */
@@ -24,7 +22,7 @@ public class CatalogListPresenter extends PresenterImpl {
         new SearchCatalogListInteractor().execute();
     }
 
-    @Subscribe
+    //    @Subscribe
     public void catalogListRetrieved(List<Commit> object) {
         catalogListView.show(object);
     }
