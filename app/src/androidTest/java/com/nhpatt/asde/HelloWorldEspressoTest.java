@@ -4,7 +4,7 @@ import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
 
-import com.nhpatt.asde.mvp.activities.MainActivity;
+import com.nhpatt.asde.mvp.activities.CatalogListActivity;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -19,16 +19,16 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 @LargeTest
 public class HelloWorldEspressoTest {
 
-    public HelloWorldEspressoTest() {
-        super();
-    }
+	@Rule
+	public ActivityTestRule<CatalogListActivity> mActivityRule = new ActivityTestRule(CatalogListActivity.class);
 
-    @Rule
-    public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule(MainActivity.class);
+	public HelloWorldEspressoTest() {
+		super();
+	}
 
-    @Test
-    public void listGoesOverTheFold() {
-        onView(withText("Hello word!")).check(matches(isDisplayed()));
-    }
+	@Test
+	public void listGoesOverTheFold() {
+		onView(withText("Get Catalog List")).check(matches(isDisplayed()));
+	}
 
 }

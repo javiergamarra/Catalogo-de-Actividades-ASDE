@@ -11,8 +11,8 @@ before_install:
 
     - echo no | android create avd --force -n test -t android-19 --abi armeabi-v7a
     - emulator -avd test -no-skin -no-audio -no-window &
-    - adb shell input keyevent 82 &
     - adb wait-for-device
+    - adb shell input keyevent 82 &
 
 before_script:
 #    - curl https://raw.githubusercontent.com/travis-ci/travis-cookbooks/62039b204699adcdf4b3365fac42d81246cb57fe/ci_environment/android-sdk/files/default/android-wait-for-emulator > android-wait-for-emulator
@@ -43,11 +43,11 @@ script:
     - adb shell pm list packages
     #adb shell netstat -nalt
 
-#    - adb install app/build/outputs/apk/app-debug.apk
-#    - adb install app/build/outputs/apk/app-debug-androidTest-unaligned.apk
+    - adb install app/build/outputs/apk/app-debug.apk
+    - adb install app/build/outputs/apk/app-debug-androidTest-unaligned.apk
 #    - adb shell am instrument -w com.nhpatt.catalogodeactividadesasde/android.support.test.runner.AndroidJUnitRunner
 
-#    - adb shell input keyevent 82 &
+    - adb shell input keyevent 82 &
     - ./gradlew connectedAndroidTest
 #    - ./gradlew build
 #    - adb shell input keyevent 82 &
