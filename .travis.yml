@@ -1,0 +1,55 @@
+language: objective-c
+osx_image: xcode7.1
+
+env:
+  global:
+    - ADB_INSTALL_TIMEOUT=10 # minutes (2 minutes by default)
+
+before_install:
+    - export COMPONENTS=build-tools-23.0.2,android-19,android-23,extra-android-m2repository,extra-google-m2repository,sys-img-armeabi-v7a-android-19
+    - curl -L https://raw.github.com/embarkmobile/android-sdk-installer/version-2/android-sdk-installer | bash /dev/stdin --install=$COMPONENTS && source ~/.android-sdk-installer/env
+
+    - echo no | android create avd --force -n test -t android-19 --abi armeabi-v7a
+    - emulator -avd test -no-skin -no-audio -no-window &
+    - adb wait-for-device
+    - adb shell input keyevent 82 &
+
+before_script:
+#    - curl https://raw.githubusercontent.com/travis-ci/travis-cookbooks/62039b204699adcdf4b3365fac42d81246cb57fe/ci_environment/android-sdk/files/default/android-wait-for-emulator > android-wait-for-emulator
+#    - chmod u+x android-wait-for-emulator
+#    - ./android-wait-for-emulator
+#    - adb kill-server
+#    - adb start-server
+#    - echo no | android create avd --force -n test -t android-19 --abi armeabi-v7a
+#    - emulator -avd test -no-skin -no-audio -no-window &
+#    - adb wait-for-device
+#    - adb shell input keyevent 82 &
+#    - ./android-wait-for-emulator
+
+script:
+#    - echo "sdk.dir=$ANDROID_HOME" > local.properties
+    - ./gradlew clean
+    - ./gradlew assembleDebug
+    - ./gradlew assembleDebugAndroidTest
+#    - adb kill-server
+#    - adb start-server
+#    - emulator -avd test -no-skin -no-audio -no-window &
+#    - ./android-wait-for-emulator
+#    - adb devices -l
+#    - adb shell input keyevent 82
+#    - adb shell input keyevent 26
+#    - adb shell input touchscreen swipe 930 380 1080 380
+#    - adb get-state
+    - adb shell pm list packages
+    #adb shell netstat -nalt
+
+    - adb install app/build/outputs/apk/app-debug.apk
+    - adb install app/build/outputs/apk/app-debug-androidTest-unaligned.apk
+#    - adb shell am instrument -w com.nhpatt.catalogodeactividadesasde/android.support.test.runner.AndroidJUnitRunner
+
+    - adb shell input keyevent 82 &
+    - ./gradlew connectedAndroidTest
+#    - ./gradlew build
+#    - adb shell input keyevent 82 &
+#    - ./android-wait-for-emulator
+#    - ./gradlew connectedAndroidTest
