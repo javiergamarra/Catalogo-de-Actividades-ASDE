@@ -7,6 +7,7 @@ import com.nhpatt.asde.mvp.views.CatalogListView;
 import java.util.List;
 
 import de.greenrobot.event.Subscribe;
+import de.greenrobot.event.ThreadMode;
 
 /**
  * @author Hugo Nebreda
@@ -23,7 +24,7 @@ public class CatalogListPresenter extends PresenterImpl {
         new SearchCatalogListInteractor().execute();
     }
 
-    @Subscribe
+    @Subscribe(threadMode = ThreadMode.MainThread)
     public void catalogListRetrieved(List<Commits> object) {
         catalogListView.show(object);
     }
