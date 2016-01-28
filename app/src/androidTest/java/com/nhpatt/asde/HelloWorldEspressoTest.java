@@ -29,6 +29,9 @@ public class HelloWorldEspressoTest {
 	@Test
 	public void listGoesOverTheFold() {
 		onView(withText("Get Catalog List")).check(matches(isDisplayed()));
+
+		//TODO click button
+		//TODO results shown
 	}
 
 }
