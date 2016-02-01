@@ -1,5 +1,6 @@
 package com.nhpatt.asde.mvp.views;
 
+import com.nhpatt.asde.models.Commit;
 import com.nhpatt.asde.models.Commits;
 
 import java.util.List;
@@ -9,4 +10,6 @@ import java.util.List;
  */
 public interface CatalogListView {
     void show(List<Commits> catalogList);
+
+    void click(Commit clickedCommit);
 }
