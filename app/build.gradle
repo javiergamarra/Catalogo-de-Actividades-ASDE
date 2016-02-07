@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.nhpatt.catalogodeactividadesasde"
+        applicationId "com.nhpatt.asde"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1
