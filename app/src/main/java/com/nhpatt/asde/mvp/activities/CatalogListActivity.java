@@ -1,13 +1,17 @@
 package com.nhpatt.asde.mvp.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.nhpatt.asde.R;
+import com.nhpatt.asde.models.Commit;
 import com.nhpatt.asde.models.Commits;
 import com.nhpatt.asde.mvp.presenters.CatalogListPresenter;
 import com.nhpatt.asde.mvp.views.CatalogListView;
@@ -46,14 +50,34 @@ public class CatalogListActivity extends AbstractActivity<CatalogListPresenter> 
     }
 
     @Override
-    public void show(List<Commits> catalogList) {
+    public void show(final List<Commits> catalogList) {
         List<String> auxList = new ArrayList<>();
 
         for (int position = 0; position < catalogList.size(); position++) {
             auxList.add(catalogList.get(position).getComments_url());
         }
 
-        ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, auxList);
+        final ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, auxList);
         catalogListView.setAdapter(adapter);
+        catalogListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Toast.makeText(parent.getContext(), "Click", Toast.LENGTH_SHORT).show();
+                Intent clickedItemIntent = new Intent(parent.getContext(), RiskDetailActivity.class);
+                clickedItemIntent.putExtra("commit", catalogList.get(position).getCommit());
+                //TODO Recuperar el valor del item clickeado
+                //TODO Crear bundle y añadir el valor, y pasar el bundle a la actividad
+                startActivity(clickedItemIntent);
+            }
+        });
     }
+
+    @Override
+    public void click(Commit item){
+
+    }
+
+
+
 }

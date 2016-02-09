@@ -1,9 +1,11 @@
 package com.nhpatt.asde.models;
 
+import java.io.Serializable;
+
 /**
  * @author Javier Gamarra
  */
-public class Author {
+public class Author implements Serializable{
 
     private String name;
 
