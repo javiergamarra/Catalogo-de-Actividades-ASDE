@@ -1,61 +1,65 @@
 apply plugin: 'com.android.application'
 
 android {
-	compileSdkVersion 23
-	buildToolsVersion "23.0.2"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
 
-	defaultConfig {
-		applicationId "com.nhpatt.catalogodeactividadesasde"
-		minSdkVersion 16
-		targetSdkVersion 23
-		versionCode 1
-		versionName "1.0"
+    defaultConfig {
+        applicationId "com.nhpatt.asde"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
 
-		testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-	}
-	buildTypes {
-		release {
-			minifyEnabled false
-			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-		}
-	}
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
 
-	compileOptions {
-		sourceCompatibility JavaVersion.VERSION_1_7
-		targetCompatibility JavaVersion.VERSION_1_7
-	}
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
 
-	packagingOptions {
-		exclude 'META-INF/LICENSE'
-		exclude 'META-INF/NOTICE'
-	}
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
 
-	adbOptions {
-		timeOutInMs 300000 // 5 seconds in ms.
-		installOptions "-d", "-t"
-	}
+    adbOptions {
+        timeOutInMs 300000 // 5 seconds in ms.
+        installOptions "-d", "-t"
+    }
+
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
-	compile fileTree(dir: 'libs', include: ['*.jar'])
-	testCompile 'junit:junit:4.12'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
 
 //    provided 'de.greenrobot:eventbus-annotation-processor:3.0.0-beta1'
-	compile 'com.android.support:design:23.1.1'
-	compile 'com.android.support:support-v4:23.1.1'
-	compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
-	compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
-	compile 'de.greenrobot:eventbus:3.0.0-beta1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
+    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
+    compile 'de.greenrobot:eventbus:3.0.0-beta1'
 
-	compile 'com.android.support.test:runner:0.4.1'
-	compile 'com.android.support.test:rules:0.4.1'
-	androidTestCompile('com.android.support.test.espresso:espresso-core:+') {
-		exclude group: 'com.android.support', module: 'support-annotations'
-	}
-	androidTestCompile('com.android.support.test.espresso:espresso-contrib:+') {
-		exclude group: 'com.android.support', module: 'support-v4'
-		exclude group: 'com.android.support', module: 'support-annotations'
-	}
-	androidTestCompile 'com.android.support.test.espresso:espresso-idling-resource:+'
-	androidTestCompile 'junit:junit:4.12'
+    compile 'com.android.support.test:runner:0.4.1'
+    compile 'com.android.support.test:rules:0.4.1'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:+') {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    androidTestCompile('com.android.support.test.espresso:espresso-contrib:+') {
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    androidTestCompile 'com.android.support.test.espresso:espresso-idling-resource:+'
+    androidTestCompile 'junit:junit:4.12'
 }
