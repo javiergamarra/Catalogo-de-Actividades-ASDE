@@ -1,8 +1,6 @@
 package com.nhpatt.asde.mvp.activities;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.nhpatt.asde.R;
@@ -25,8 +23,7 @@ public class RiskDetailActivity extends AbstractActivity<RiskDetailPresenter>
 
         bindViews();
 
-        if (null != getIntent())
-        {
+        if (null != getIntent()) {
             Commit commit = (Commit) getIntent().getExtras().get("commit");
             assert commit != null;
             activityNameTextView.setText(commit.getAuthor().getName());
