@@ -6,8 +6,6 @@ package com.nhpatt.asde;
  */
 public class Calculator {
 
-    public enum Operator {ADD, SUB, DIV, MUL}
-
     /**
      * Addition operation
      */
@@ -28,4 +26,6 @@ public class Calculator {
     public double mul(double firstOperand, double secondOperand) {
         return firstOperand * secondOperand;
     }
+
+    public enum Operator {ADD, SUB, DIV, MUL}
 }
