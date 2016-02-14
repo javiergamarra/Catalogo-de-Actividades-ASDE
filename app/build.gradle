@@ -30,11 +30,6 @@ android {
         exclude 'META-INF/NOTICE'
     }
 
-    adbOptions {
-        timeOutInMs 300000 // 5 seconds in ms.
-        installOptions "-d", "-t"
-    }
-
     lintOptions {
         abortOnError false
     }
@@ -42,7 +37,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
 
 //    provided 'de.greenrobot:eventbus-annotation-processor:3.0.0-beta1'
     compile 'com.android.support:design:23.1.1'
@@ -53,6 +47,8 @@ dependencies {
 
     compile 'com.android.support.test:runner:0.4.1'
     compile 'com.android.support.test:rules:0.4.1'
+
+    testCompile 'junit:junit:4.12'
     androidTestCompile('com.android.support.test.espresso:espresso-core:+') {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
@@ -60,6 +56,6 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-v4'
         exclude group: 'com.android.support', module: 'support-annotations'
     }
-    androidTestCompile 'com.android.support.test.espresso:espresso-idling-resource:+'
+    androidTestCompile 'com.android.support.test.espresso:espresso-idling-resource:0.4.1'
     androidTestCompile 'junit:junit:4.12'
 }
