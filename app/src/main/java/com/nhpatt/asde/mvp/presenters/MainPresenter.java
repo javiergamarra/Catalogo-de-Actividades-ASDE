@@ -3,7 +3,7 @@ package com.nhpatt.asde.mvp.presenters;
 import com.nhpatt.asde.async.interactors.MainInteractor;
 import com.nhpatt.asde.mvp.views.MainView;
 
-import de.greenrobot.event.Subscribe;
+import org.greenrobot.eventbus.Subscribe;
 
 public class MainPresenter extends PresenterImpl {
 
