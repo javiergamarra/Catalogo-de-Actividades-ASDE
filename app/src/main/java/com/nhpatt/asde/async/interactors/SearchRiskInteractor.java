@@ -7,9 +7,9 @@ import com.nhpatt.asde.models.Contributor;
 import java.io.IOException;
 import java.util.List;
 
-import retrofit.Call;
-import retrofit.GsonConverterFactory;
-import retrofit.Retrofit;
+import retrofit2.Call;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * @author Javier Gamarra

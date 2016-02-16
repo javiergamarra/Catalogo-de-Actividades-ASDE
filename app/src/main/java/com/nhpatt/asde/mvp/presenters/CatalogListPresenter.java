@@ -4,10 +4,10 @@ import com.nhpatt.asde.async.interactors.SearchCatalogListInteractor;
 import com.nhpatt.asde.models.Commits;
 import com.nhpatt.asde.mvp.views.CatalogListView;
 
-import java.util.List;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
-import de.greenrobot.event.Subscribe;
-import de.greenrobot.event.ThreadMode;
+import java.util.List;
 
 /**
  * @author Hugo Nebreda
@@ -24,7 +24,7 @@ public class CatalogListPresenter extends PresenterImpl {
         new SearchCatalogListInteractor().execute();
     }
 
-    @Subscribe(threadMode = ThreadMode.MainThread)
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void catalogListRetrieved(List<Commits> object) {
         catalogListView.show(object);
     }

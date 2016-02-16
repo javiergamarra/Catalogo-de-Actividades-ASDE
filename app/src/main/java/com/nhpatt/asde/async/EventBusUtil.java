@@ -1,6 +1,6 @@
 package com.nhpatt.asde.async;
 
-import de.greenrobot.event.EventBus;
+import org.greenrobot.eventbus.EventBus;
 
 public class EventBusUtil {
     public static void post(Object event) {
