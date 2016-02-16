@@ -12,7 +12,7 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:onClick="searchCatalog"
-        android:text="Get Catalog List" />
+        android:text="@string/get_catalog_list" />
 
     <ListView
         android:id="@+id/catalog_listview"

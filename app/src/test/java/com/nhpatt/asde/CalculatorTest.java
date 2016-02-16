@@ -1,14 +1,5 @@
 package com.nhpatt.asde;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
-
-
 /**
  * JUnit4 unit tests for the calculator logic.
  */

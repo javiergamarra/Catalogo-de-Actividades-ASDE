@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:orientation="horizontal">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/activity_name_textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignParentTop="true">
-        <TextView
-            android:id="@+id/activity_name_textview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Activity Name"
-            android:gravity="center"/>
-    </LinearLayout>
-
-</RelativeLayout>
+        android:gravity="center"
+        android:hint="@string/activity_name" />
+</LinearLayout>
