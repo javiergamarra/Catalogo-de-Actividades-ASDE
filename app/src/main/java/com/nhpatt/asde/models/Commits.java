@@ -1,7 +1,8 @@
 package com.nhpatt.asde.models;
 
 public class Commits {
-    private final String comments_url;
+
+    private String comments_url;
     private Commit commit;
 
     public Commits(String comments_url) {

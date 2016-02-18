@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * @author Javier Gamarra
  */
-public class Author implements Serializable{
+public class Author implements Serializable {
 
     private String name;
 

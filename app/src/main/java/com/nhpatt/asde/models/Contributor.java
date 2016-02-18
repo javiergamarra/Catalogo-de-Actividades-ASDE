@@ -1,6 +1,7 @@
 package com.nhpatt.asde.models;
 
 public class Contributor {
+
     public final String login;
     public final int contributions;
 
