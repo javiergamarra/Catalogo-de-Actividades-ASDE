@@ -1,25 +1,26 @@
 package com.nhpatt.asde.mvp.activities;
 
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
 import com.nhpatt.asde.R;
 import com.nhpatt.asde.models.Commit;
 import com.nhpatt.asde.mvp.presenters.EventDetailPresenter;
-import com.nhpatt.asde.mvp.views.RiskDetailView;
+import com.nhpatt.asde.mvp.views.EventDetailView;
 
 /**
  * @author Javier Gamarra
  */
 public class EventDetailActivity extends AbstractActivity<EventDetailPresenter>
-        implements RiskDetailView {
+        implements EventDetailView {
 
     private TextView activityNameTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.risk_detail);
+        setContentView(R.layout.activity_event_detail);
 
         bindViews();
 
@@ -32,6 +33,9 @@ public class EventDetailActivity extends AbstractActivity<EventDetailPresenter>
     }
 
     private void bindViews() {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         activityNameTextView = (TextView) findViewById(R.id.activity_name_textview);
     }
 

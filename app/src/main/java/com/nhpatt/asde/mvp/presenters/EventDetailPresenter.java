@@ -1,7 +1,8 @@
 package com.nhpatt.asde.mvp.presenters;
 
 import com.nhpatt.asde.async.interactors.SearchEventInteractor;
-import com.nhpatt.asde.mvp.views.RiskDetailView;
+import com.nhpatt.asde.async.interactors.SearchEventListInteractor;
+import com.nhpatt.asde.mvp.views.EventDetailView;
 
 import org.greenrobot.eventbus.Subscribe;
 
@@ -10,10 +11,10 @@ import org.greenrobot.eventbus.Subscribe;
  */
 public class EventDetailPresenter extends PresenterImpl {
 
-    private final RiskDetailView riskDetailView;
+    private final EventDetailView eventDetailView;
 
-    public EventDetailPresenter(RiskDetailView riskDetailView) {
-        this.riskDetailView = riskDetailView;
+    public EventDetailPresenter(EventDetailView eventDetailView) {
+        this.eventDetailView = eventDetailView;
     }
 
     public void search() {
@@ -21,7 +22,7 @@ public class EventDetailPresenter extends PresenterImpl {
     }
 
     @Subscribe
-    public void riskRetrieved(String object) {
-        riskDetailView.show(object);
+    public void eventRetrieved(String object) {
+        eventDetailView.show(object);
     }
 }
