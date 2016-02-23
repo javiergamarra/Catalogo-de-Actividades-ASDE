@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.nhpatt.asde.R;
 import com.nhpatt.asde.models.Commit;
+import com.nhpatt.asde.models.Event;
 import com.nhpatt.asde.mvp.presenters.EventDetailPresenter;
 import com.nhpatt.asde.mvp.views.EventDetailView;
 
@@ -25,9 +26,10 @@ public class EventDetailActivity extends AbstractActivity<EventDetailPresenter>
         bindViews();
 
         if (null != getIntent()) {
-            Commit commit = (Commit) getIntent().getExtras().get("commit");
-            assert commit != null;
-            activityNameTextView.setText(commit.getAuthor().getName());
+            Event event = (Event) getIntent().getExtras().get("event");
+            assert event != null;
+            //activityNameTextView.setText(event.getName());
+            getPresenter().search();
         }
 
     }
@@ -46,7 +48,7 @@ public class EventDetailActivity extends AbstractActivity<EventDetailPresenter>
 
 
     @Override
-    public void show(String object) {
-
+    public void show(Event object) {
+        activityNameTextView.setText(object.getName());
     }
 }

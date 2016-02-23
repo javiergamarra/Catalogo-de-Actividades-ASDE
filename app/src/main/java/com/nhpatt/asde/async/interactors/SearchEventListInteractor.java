@@ -28,8 +28,6 @@ public class SearchEventListInteractor extends AbstractInteractor {
 
         ApiaryService apiary = retrofit.create(ApiaryService.class);
 
-
-        Log.w(SearchEventListInteractor.class.getSimpleName(), apiary.events().toString());
         Call<List<Event>> call = apiary.events();
 
         List<Event> events = call.execute().body();

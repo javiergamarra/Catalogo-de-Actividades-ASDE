@@ -14,4 +14,8 @@ public interface ApiaryService {
     @GET("/activities")
     Call<List<Event>> events();
 
+    @GET("/activities/{id}")
+    Call<Event> eventWithId(
+            @Path("id") String id
+    );
 }

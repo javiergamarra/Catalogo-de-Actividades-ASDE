@@ -1,8 +1,10 @@
 package com.nhpatt.asde.async.interactors;
 
 import com.nhpatt.asde.async.EventBusUtil;
+import com.nhpatt.asde.async.services.ApiaryService;
 import com.nhpatt.asde.async.services.GitHubService;
 import com.nhpatt.asde.models.Contributor;
+import com.nhpatt.asde.models.Event;
 
 import java.io.IOException;
 import java.util.List;
@@ -18,17 +20,17 @@ public class SearchEventInteractor extends AbstractInteractor {
     @Override
     public void runOnBackground() throws IOException {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://api.github.com")
+                .baseUrl("http://private-8b0f5-catalogodeactividadesasde.apiary-mock.com")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        GitHubService github = retrofit.create(GitHubService.class);
+        ApiaryService apiary = retrofit.create(ApiaryService.class);
 
-        Call<List<Contributor>> call = github.contributors("nhpatt", "javascript-learning-group");
+        Call<Event> call = apiary.eventWithId("1");
 
-        List<Contributor> contributors = call.execute().body();
+        Event singleEvent = call.execute().body();
 
-        EventBusUtil.post(String.valueOf(contributors.get(0)));
+        EventBusUtil.post(singleEvent);
 
 
     }

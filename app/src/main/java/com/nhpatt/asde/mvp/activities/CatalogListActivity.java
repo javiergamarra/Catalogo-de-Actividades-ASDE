@@ -50,38 +50,8 @@ public class CatalogListActivity extends AbstractActivity<CatalogListPresenter> 
         getPresenter().searchCatalogList();
     }
 
-//   @Override
-//   public void show(final List<Commits> catalogList) {
-//       List<String> auxList = new ArrayList<>();
-
-//       for (int position = 0; position < catalogList.size(); position++) {
-//           auxList.add(catalogList.get(position).getComments_url());
-//       }
-
-//       final ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, auxList);
-//       catalogListView.setAdapter(adapter);
-//       catalogListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//           @Override
-//           public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-//               Toast.makeText(parent.getContext(), "Click", Toast.LENGTH_SHORT).show();
-//               Intent clickedItemIntent = new Intent(parent.getContext(), EventDetailActivity.class);
-//               clickedItemIntent.putExtra("commit", catalogList.get(position).getCommit());
-//               //TODO Recuperar el valor del item clickeado
-//               //TODO Crear bundle y añadir el valor, y pasar el bundle a la actividad
-//               startActivity(clickedItemIntent);
-//           }
-//       });
-//   }
-
-//    @Override
-//    public void click(Commit item){
-//
-//    }
-
-
     @Override
-    public void show(List<Event> eventList) {
+    public void show(final List<Event> eventList) {
         List<String> auxList = new ArrayList<>();
 
         for (int position = 0; position < eventList.size(); position++) {
@@ -90,15 +60,15 @@ public class CatalogListActivity extends AbstractActivity<CatalogListPresenter> 
 
         final ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, auxList);
         catalogListView.setAdapter(adapter);
-        //    catalogListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-        //        @Override
-        //        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        catalogListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-        //            Toast.makeText(parent.getContext(), "Click", Toast.LENGTH_SHORT).show();
-        //            Intent clickedItemIntent = new Intent(parent.getContext(), EventDetailActivity.class);
-        //            clickedItemIntent.putExtra("commit", eventList.get(position).getName());
-        //            startActivity(clickedItemIntent);
-        //        }
-        //    });
+                Toast.makeText(parent.getContext(), "Click", Toast.LENGTH_SHORT).show();
+                Intent clickedItemIntent = new Intent(parent.getContext(), EventDetailActivity.class);
+                clickedItemIntent.putExtra("event", eventList.get(position));
+                startActivity(clickedItemIntent);
+            }
+        });
     }
 }
