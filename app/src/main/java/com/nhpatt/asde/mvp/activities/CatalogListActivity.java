@@ -64,7 +64,7 @@ public class CatalogListActivity extends AbstractActivity<CatalogListPresenter> 
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Toast.makeText(parent.getContext(), "Click", Toast.LENGTH_SHORT).show();
-                Intent clickedItemIntent = new Intent(parent.getContext(), RiskDetailActivity.class);
+                Intent clickedItemIntent = new Intent(parent.getContext(), EventDetailActivity.class);
                 clickedItemIntent.putExtra("commit", catalogList.get(position).getCommit());
                 //TODO Recuperar el valor del item clickeado
                 //TODO Crear bundle y añadir el valor, y pasar el bundle a la actividad

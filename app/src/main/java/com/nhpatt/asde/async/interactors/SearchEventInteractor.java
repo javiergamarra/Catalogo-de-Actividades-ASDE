@@ -14,7 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 /**
  * @author Javier Gamarra
  */
-public class SearchRiskInteractor extends AbstractInteractor {
+public class SearchEventInteractor extends AbstractInteractor {
     @Override
     public void runOnBackground() throws IOException {
         Retrofit retrofit = new Retrofit.Builder()

@@ -5,13 +5,13 @@ import android.widget.TextView;
 
 import com.nhpatt.asde.R;
 import com.nhpatt.asde.models.Commit;
-import com.nhpatt.asde.mvp.presenters.RiskDetailPresenter;
+import com.nhpatt.asde.mvp.presenters.EventDetailPresenter;
 import com.nhpatt.asde.mvp.views.RiskDetailView;
 
 /**
  * @author Javier Gamarra
  */
-public class RiskDetailActivity extends AbstractActivity<RiskDetailPresenter>
+public class EventDetailActivity extends AbstractActivity<EventDetailPresenter>
         implements RiskDetailView {
 
     private TextView activityNameTextView;
@@ -36,8 +36,8 @@ public class RiskDetailActivity extends AbstractActivity<RiskDetailPresenter>
     }
 
     @Override
-    protected RiskDetailPresenter createPresenter() {
-        return new RiskDetailPresenter(this);
+    protected EventDetailPresenter createPresenter() {
+        return new EventDetailPresenter(this);
     }
 
 

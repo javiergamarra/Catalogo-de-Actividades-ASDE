@@ -14,7 +14,7 @@
             android:label="@string/app_name">
 
         </activity>
-        <activity android:name=".mvp.activities.RiskDetailActivity" />
+        <activity android:name=".mvp.activities.EventDetailActivity" />
         <activity
             android:name=".mvp.activities.CatalogListActivity"
             android:label="@string/app_name">
