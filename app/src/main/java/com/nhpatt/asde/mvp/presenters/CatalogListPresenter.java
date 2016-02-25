@@ -1,11 +1,9 @@
 package com.nhpatt.asde.mvp.presenters;
 
+import com.nhpatt.asde.async.EventBusUtil;
 import com.nhpatt.asde.async.interactors.SearchCatalogListInteractor;
 import com.nhpatt.asde.models.Commits;
 import com.nhpatt.asde.mvp.views.CatalogListView;
-
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.List;
 
@@ -21,11 +19,18 @@ public class CatalogListPresenter extends PresenterImpl {
     }
 
     public void searchCatalogList() {
-        new SearchCatalogListInteractor().execute();
+        new SearchCatalogListInteractor().runOnRx().subscribe(this::catalogListRetrieved);
     }
 
-    @Subscribe(threadMode = ThreadMode.MAIN)
     public void catalogListRetrieved(List<Commits> object) {
         catalogListView.show(object);
+    }
+
+    @Override
+    public void onResume() {
+    }
+
+    @Override
+    public void onPause() {
     }
 }
