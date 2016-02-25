@@ -3,14 +3,12 @@ package com.nhpatt.asde.mvp.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.nhpatt.asde.R;
-import com.nhpatt.asde.models.Commit;
 import com.nhpatt.asde.models.Event;
 import com.nhpatt.asde.mvp.presenters.CatalogListPresenter;
 import com.nhpatt.asde.mvp.views.CatalogListView;
@@ -56,20 +54,13 @@ public class CatalogListActivity extends AbstractActivity<CatalogListPresenter> 
 
         final ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, auxList);
         catalogListView.setAdapter(adapter);
-        catalogListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        catalogListView.setOnItemClickListener((parent, view, position, id) -> {
 
-                Toast.makeText(parent.getContext(), "Click", Toast.LENGTH_SHORT).show();
-                Intent clickedItemIntent = new Intent(parent.getContext(), EventDetailActivity.class);
-                clickedItemIntent.putExtra("event", eventList.get(position));
-                startActivity(clickedItemIntent);
-            }
+            Toast.makeText(parent.getContext(), "Click", Toast.LENGTH_SHORT).show();
+            Intent clickedItemIntent = new Intent(parent.getContext(), EventDetailActivity.class);
+            clickedItemIntent.putExtra("event", eventList.get(position));
+            startActivity(clickedItemIntent);
         });
-    }
-
-    public void click(Commit item) {
-
     }
 
 }

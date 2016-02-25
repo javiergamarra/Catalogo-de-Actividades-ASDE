@@ -1,7 +1,5 @@
 package com.nhpatt.asde.mvp.views;
 
-import com.nhpatt.asde.models.Commit;
-import com.nhpatt.asde.models.Commits;
 import com.nhpatt.asde.models.Event;
 
 import java.util.List;

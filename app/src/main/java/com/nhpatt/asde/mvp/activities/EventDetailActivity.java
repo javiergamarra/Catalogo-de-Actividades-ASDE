@@ -5,7 +5,6 @@ import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
 import com.nhpatt.asde.R;
-import com.nhpatt.asde.models.Commit;
 import com.nhpatt.asde.models.Event;
 import com.nhpatt.asde.mvp.presenters.EventDetailPresenter;
 import com.nhpatt.asde.mvp.views.EventDetailView;
