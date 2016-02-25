@@ -7,7 +7,10 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
+import retrofit2.http.Headers;
 import retrofit2.http.Path;
+import rx.Observable;
 
 public interface GitHubService {
     @GET("/repos/{owner}/{repo}/contributors")
@@ -17,7 +20,8 @@ public interface GitHubService {
 
 
     @GET("/repos/{owner}/{repo}/commits")
-    Call<List<Commits>> commits(
+    @Headers("User-Agent: nhpatt")
+    Observable<List<Commits>> commits(
             @Path("owner") String owner,
             @Path("repo") String repo);
 

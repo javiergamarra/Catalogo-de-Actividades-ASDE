@@ -5,7 +5,8 @@ import java.io.Serializable;
 /**
  * @author Javier Gamarra
  */
-public class Commit implements Serializable{
+public class Commit implements Serializable {
+
     private Author author;
 
     public Author getAuthor() {

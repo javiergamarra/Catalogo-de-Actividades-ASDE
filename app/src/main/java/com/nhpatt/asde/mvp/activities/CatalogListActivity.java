@@ -5,14 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.nhpatt.asde.R;
 import com.nhpatt.asde.models.Commit;
-import com.nhpatt.asde.models.Commits;
 import com.nhpatt.asde.models.Event;
 import com.nhpatt.asde.mvp.presenters.CatalogListPresenter;
 import com.nhpatt.asde.mvp.views.CatalogListView;
@@ -25,7 +23,6 @@ import java.util.List;
  */
 public class CatalogListActivity extends AbstractActivity<CatalogListPresenter> implements CatalogListView {
 
-    private Button getCatalogListButton;
     private ListView catalogListView;
 
     @Override
@@ -37,7 +34,6 @@ public class CatalogListActivity extends AbstractActivity<CatalogListPresenter> 
     }
 
     private void bindViews() {
-        getCatalogListButton = (Button) findViewById(R.id.button_get_catalog_list);
         catalogListView = (ListView) findViewById(R.id.catalog_listview);
     }
 
@@ -71,4 +67,9 @@ public class CatalogListActivity extends AbstractActivity<CatalogListPresenter> 
             }
         });
     }
+
+    public void click(Commit item) {
+
+    }
+
 }

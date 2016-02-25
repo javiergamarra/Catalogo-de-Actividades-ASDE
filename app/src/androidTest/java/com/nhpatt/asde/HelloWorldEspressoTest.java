@@ -19,19 +19,19 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 @LargeTest
 public class HelloWorldEspressoTest {
 
-	@Rule
-	public ActivityTestRule<CatalogListActivity> mActivityRule = new ActivityTestRule(CatalogListActivity.class);
+    @Rule
+    public ActivityTestRule<CatalogListActivity> mActivityRule = new ActivityTestRule(CatalogListActivity.class);
 
-	public HelloWorldEspressoTest() {
-		super();
-	}
+    public HelloWorldEspressoTest() {
+        super();
+    }
 
-	@Test
-	public void listGoesOverTheFold() {
-		onView(withText("Get Catalog List")).check(matches(isDisplayed()));
+    @Test
+    public void listGoesOverTheFold() {
+        onView(withText("Get Catalog List")).check(matches(isDisplayed()));
 
-		//TODO click button
-		//TODO results shown
-	}
+        //TODO click button
+        //TODO results shown
+    }
 
 }
