@@ -4,27 +4,12 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-import com.nhpatt.asde.async.EventBusUtil;
-import com.nhpatt.asde.async.Executor;
+import rx.Observable;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
-import java.io.IOException;
 
-public abstract class AbstractInteractor implements Runnable {
-
-    public abstract void runOnBackground() throws IOException;
-
-    public void execute() {
-        Executor.execute(this);
-    }
-
-    public void run() {
-        try {
-            runOnBackground();
-        } catch (Exception ex) {
-            //TODO send sth meaningful
-            EventBusUtil.post(new Exception());
-        }
-    }
+public abstract class AbstractInteractor<L> {
 
     public boolean checkConnection(Context context) {
         ConnectivityManager manager =
@@ -33,6 +18,10 @@ public abstract class AbstractInteractor implements Runnable {
         NetworkInfo activeNetwork = manager.getActiveNetworkInfo();
         return activeNetwork != null &&
                 activeNetwork.isConnectedOrConnecting();
+    }
 
+    <T> Observable.Transformer<T, T> applySchedulers() {
+        return observable -> observable.subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
     }
 }
