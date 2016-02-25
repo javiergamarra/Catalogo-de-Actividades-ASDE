@@ -2,6 +2,7 @@ package com.nhpatt.asde.mvp.views;
 
 import com.nhpatt.asde.models.Commit;
 import com.nhpatt.asde.models.Commits;
+import com.nhpatt.asde.models.Event;
 
 import java.util.List;
 
@@ -9,7 +10,8 @@ import java.util.List;
  * @author Hugo Nebreda
  */
 public interface CatalogListView {
-    void show(List<Commits> catalogList);
+    //void show(List<Commits> catalogList);
 
-    void click(Commit clickedCommit);
+    void show(List<Event> eventList);
+    //void click(Commit clickedCommit);
 }

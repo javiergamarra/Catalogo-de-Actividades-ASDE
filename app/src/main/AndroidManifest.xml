@@ -14,7 +14,9 @@
             android:label="@string/app_name">
 
         </activity>
-        <activity android:name=".mvp.activities.RiskDetailActivity" />
+        <activity
+            android:name=".mvp.activities.EventDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".mvp.activities.CatalogListActivity"
             android:label="@string/app_name">
