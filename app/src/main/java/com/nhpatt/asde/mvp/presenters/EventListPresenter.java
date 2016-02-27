@@ -2,7 +2,6 @@ package com.nhpatt.asde.mvp.presenters;
 
 import com.nhpatt.asde.async.interactors.EventListInteractor;
 import com.nhpatt.asde.models.Event;
-import com.nhpatt.asde.mvp.views.CatalogListView;
 
 import java.util.List;
 
@@ -11,18 +10,23 @@ import java.util.List;
  */
 
 public class EventListPresenter extends PresenterImpl {
-    private final CatalogListView catalogListView;
 
-    public EventListPresenter(CatalogListView catalogListView) {
-        this.catalogListView = catalogListView;
+    private final EventListView eventListView;
+
+    public EventListPresenter(EventListView eventListView) {
+        this.eventListView = eventListView;
     }
 
-    public void searchCatalogList() {
-        new EventListInteractor().runOnRx().subscribe(this::eventListRetrieved);
+    public void searchEventList() {
+        new EventListInteractor().run().subscribe(this::eventListRetrieved);
     }
 
     public void eventListRetrieved(List<Event> object) {
-        catalogListView.show(object);
+        eventListView.show(object);
+    }
+
+    public interface EventListView {
+        void show(List<Event> eventList);
     }
 
 }
