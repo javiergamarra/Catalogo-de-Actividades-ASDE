@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * @author Hugo Nebreda
  */
-public class CatalogListActivity extends AbstractActivity<CatalogListPresenter> implements CatalogListView {
+public class EventListActivity extends AbstractActivity<CatalogListPresenter> implements CatalogListView {
 
     private ListView catalogListView;
 
