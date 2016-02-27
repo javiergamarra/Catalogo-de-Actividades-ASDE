@@ -14,7 +14,5 @@ public interface ApiaryService {
     Observable<List<Event>> events();
 
     @GET("/activities/{id}")
-    Observable<Event> eventWithId(
-            @Path("id") String id
-    );
+    Observable<Event> eventWithId(@Path("id") String id);
 }

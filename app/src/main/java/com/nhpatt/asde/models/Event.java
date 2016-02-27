@@ -8,9 +8,10 @@ import java.util.List;
 
 public class Event implements Serializable {
 
-    private final String id;
+    private String id;
     @SerializedName(value = "titulo")
-    private final String name;
+    private String name;
+    private String created;
     @SerializedName(value = "descripcion")
     private String description;
     @SerializedName(value = "caracteristicas")
@@ -20,8 +21,11 @@ public class Event implements Serializable {
     @SerializedName(value = "medidasPreventivas")
     private Measure measure;
 
-    public Event(String name, String id) {
-        this.name = name;
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -29,21 +33,20 @@ public class Event implements Serializable {
         return name;
     }
 
-    public String getId() {
-        return id;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public Measure getMeasure() {
-        return measure;
+    public String getCreated() {
+        return created;
     }
 
-    public void setMeasure(Measure measure) {
-        this.measure = measure;
+    public void setCreated(String created) {
+        this.created = created;
     }
 
     public String getDescription() {
         return description;
-
     }
 
     public void setDescription(String description) {
@@ -66,4 +69,11 @@ public class Event implements Serializable {
         this.riskLevel = riskLevel;
     }
 
+    public Measure getMeasure() {
+        return measure;
+    }
+
+    public void setMeasure(Measure measure) {
+        this.measure = measure;
+    }
 }

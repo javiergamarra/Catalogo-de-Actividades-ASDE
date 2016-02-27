@@ -10,10 +10,9 @@ import rx.Observable;
  */
 public class EventInteractor extends AbstractInteractor {
 
-    @Override
-    public Observable<Event> run() {
+    public Observable<Event> run(String id) {
         ApiaryService apiaryService = getApiary().create(ApiaryService.class);
-        return apiaryService.eventWithId("1").compose(applySchedulers());
+        return apiaryService.eventWithId(id).compose(applySchedulers());
     }
 
 }
