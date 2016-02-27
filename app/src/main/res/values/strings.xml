@@ -1,6 +1,3 @@
 <resources>
     <string name="app_name">Catalogo de Actividades ASDE</string>
-
-    <string name="get_catalog_list">Get Catalog List</string>
-    <string name="activity_name">Activity Name</string>
 </resources>
