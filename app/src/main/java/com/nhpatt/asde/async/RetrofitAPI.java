@@ -9,9 +9,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class RetrofitAPI {
 
+    public static final String BASE_URL
+            = "http://private-8b0f5-catalogodeactividadesasde.apiary-mock.com";
+
     public static Retrofit getApiary() {
         return new Retrofit.Builder()
-                .baseUrl("http://private-8b0f5-catalogodeactividadesasde.apiary-mock.com")
+                .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
