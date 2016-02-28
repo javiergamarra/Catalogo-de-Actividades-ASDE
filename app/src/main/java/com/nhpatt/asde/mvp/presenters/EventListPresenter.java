@@ -5,11 +5,15 @@ import com.nhpatt.asde.models.Event;
 
 import java.util.List;
 
+import rx.Observable;
+
 /**
  * @author Hugo Nebreda
  */
 
 public class EventListPresenter extends PresenterImpl {
+
+    private static Observable<List<Event>> observable = new EventListInteractor().run().cache();
 
     private final EventListView eventListView;
 
@@ -18,7 +22,7 @@ public class EventListPresenter extends PresenterImpl {
     }
 
     public void searchEventList() {
-        new EventListInteractor().run().subscribe(this::eventListRetrieved);
+        observable.subscribe(this::eventListRetrieved);
     }
 
     public void eventListRetrieved(List<Event> object) {
