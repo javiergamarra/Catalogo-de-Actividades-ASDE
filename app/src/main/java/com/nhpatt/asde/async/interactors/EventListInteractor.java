@@ -1,6 +1,5 @@
 package com.nhpatt.asde.async.interactors;
 
-import com.nhpatt.asde.async.RetrofitAPI;
 import com.nhpatt.asde.async.services.ApiaryService;
 import com.nhpatt.asde.models.Event;
 
@@ -11,11 +10,10 @@ import rx.Observable;
 /**
  * @author Hugo Nebreda
  */
-public class SearchEventListInteractor extends AbstractInteractor {
+public class EventListInteractor extends AbstractInteractor {
 
-    public Observable<List<Event>> runOnRx() {
-
-        ApiaryService apiary = RetrofitAPI.getApiary().create(ApiaryService.class);
+    public Observable<List<Event>> run() {
+        ApiaryService apiary = getApiary().create(ApiaryService.class);
         return apiary.events().compose(applySchedulers());
     }
 }

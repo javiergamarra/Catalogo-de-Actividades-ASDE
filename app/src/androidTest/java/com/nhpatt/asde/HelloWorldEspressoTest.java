@@ -4,7 +4,7 @@ import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
 
-import com.nhpatt.asde.mvp.activities.CatalogListActivity;
+import com.nhpatt.asde.mvp.activities.EventListActivity;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -20,7 +20,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 public class HelloWorldEspressoTest {
 
     @Rule
-    public ActivityTestRule<CatalogListActivity> mActivityRule = new ActivityTestRule(CatalogListActivity.class);
+    public ActivityTestRule<EventListActivity> mActivityRule = new ActivityTestRule(EventListActivity.class);
 
     public HelloWorldEspressoTest() {
         super();
