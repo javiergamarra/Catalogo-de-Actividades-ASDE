@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class RetrofitAPI {
 
-    public static final String BASE_URL
+    private static final String BASE_URL
             = "http://private-8b0f5-catalogodeactividadesasde.apiary-mock.com";
 
     public static Retrofit getApiary() {
