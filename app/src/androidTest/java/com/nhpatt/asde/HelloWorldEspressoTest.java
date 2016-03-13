@@ -20,7 +20,8 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 public class HelloWorldEspressoTest {
 
     @Rule
-    public ActivityTestRule<EventListActivity> mActivityRule = new ActivityTestRule(EventListActivity.class);
+    public ActivityTestRule<EventListActivity> mActivityRule
+            = new ActivityTestRule(EventListActivity.class);
 
     public HelloWorldEspressoTest() {
         super();

@@ -13,7 +13,8 @@ import rx.Observable;
 
 public class EventListPresenter extends PresenterImpl {
 
-    private static Observable<List<Event>> observable = new EventListInteractor().run().cache();
+    private static Observable<List<Event>> observable
+            = new EventListInteractor().run().cache();
 
     private final EventListView eventListView;
 
