@@ -14,12 +14,12 @@ import com.nhpatt.asde.mvp.presenters.EventDetailPresenter;
 public class EventDetailActivity extends AbstractActivity<EventDetailPresenter>
         implements EventDetailPresenter.EventDetailView {
 
-    private TextView activityDescriptionTitleTextView;
-    private TextView activityDescriptionContentTextView;
-    private TextView activityCharacteristicsTitleTextView;
-    private TextView activityCharacteristicsContentView;
-    private TextView activityMeasuresTitleTextView;
-    private TextView activityMeasuresTitleContentView;
+    private TextView descriptionTitleTextView;
+    private TextView descriptionContentTextView;
+    private TextView characteristicsTitleTextView;
+    private TextView characteristicsContentView;
+    private TextView measuresTitleTextView;
+    private TextView measuresTitleContentView;
     private Toolbar toolbar;
 
     @Override
@@ -44,12 +44,12 @@ public class EventDetailActivity extends AbstractActivity<EventDetailPresenter>
     }
 
     private void bindViews() {
-        activityDescriptionTitleTextView = (TextView) findViewById(R.id.activity_description_title_textview);
-        activityDescriptionContentTextView = (TextView) findViewById(R.id.activity_description_content_textview);
-        activityCharacteristicsTitleTextView = (TextView) findViewById(R.id.activity_characteristics_title_textview);
-        activityCharacteristicsContentView = (TextView) findViewById(R.id.activity_characteristics_content_textview);
-        activityMeasuresTitleTextView = (TextView) findViewById(R.id.activity_measure_title_textview);
-        activityMeasuresTitleContentView = (TextView) findViewById(R.id.activity_measure_content_textview);
+        descriptionTitleTextView = (TextView) findViewById(R.id.description_title_textview);
+        descriptionContentTextView = (TextView) findViewById(R.id.description_content_textview);
+        characteristicsTitleTextView = (TextView) findViewById(R.id.characteristics_title_textview);
+        characteristicsContentView = (TextView) findViewById(R.id.characteristics_content_textview);
+        measuresTitleTextView = (TextView) findViewById(R.id.measure_title_textview);
+        measuresTitleContentView = (TextView) findViewById(R.id.measure_content_textview);
     }
 
     @Override
@@ -61,9 +61,9 @@ public class EventDetailActivity extends AbstractActivity<EventDetailPresenter>
     @Override
     public void show(Event object) {
         toolbar.setTitle(object.getName());
-        activityDescriptionContentTextView.setText(object.getDescription());
-        activityCharacteristicsContentView.setText(object.getCharacteristicsAsString());
-        activityMeasuresTitleContentView.setText(object.getMeasure().toString());
+        descriptionContentTextView.setText(object.getDescription());
+        characteristicsContentView.setText(object.getCharacteristicsAsString());
+        measuresTitleContentView.setText(object.getMeasure().toString());
 
     }
 }

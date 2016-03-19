@@ -39,7 +39,7 @@
             tools:context="com.nhpatt.asde.mvp.activities.EventDetailActivity">
 
             <TextView
-                android:id="@+id/activity_description_title_textview"
+                android:id="@+id/description_title_textview"
                 style="@style/EventDetailSectionTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -49,48 +49,48 @@
                 android:textColor="@android:color/white" />
 
             <TextView
-                android:id="@+id/activity_description_content_textview"
+                android:id="@+id/description_content_textview"
                 style="@style/EventDetailSectionContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/activity_description_title_textview"
+                android:layout_below="@id/description_title_textview"
                 android:gravity="center_vertical"
                 android:hint="La descripcion de la actividad" />
 
             <TextView
-                android:id="@+id/activity_characteristics_title_textview"
+                android:id="@+id/characteristics_title_textview"
                 style="@style/EventDetailSectionTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/activity_description_content_textview"
+                android:layout_below="@id/description_content_textview"
                 android:gravity="center_horizontal"
                 android:text="CARACTERÍSTICAS" />
 
             <TextView
-                android:id="@+id/activity_characteristics_content_textview"
+                android:id="@+id/characteristics_content_textview"
                 style="@style/EventDetailSectionContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/activity_characteristics_title_textview"
                 android:text="las caracteristicas de la actividad" />
+                android:layout_below="@id/characteristics_title_textview"
 
             <TextView
-                android:id="@+id/activity_measure_title_textview"
+                android:id="@+id/measure_title_textview"
                 style="@style/EventDetailSectionTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/activity_characteristics_content_textview"
+                android:layout_below="@id/characteristics_content_textview"
                 android:gravity="center_horizontal"
                 android:text="MEDIDAS PREVENTIVAS" />
 
 
             <TextView
-                android:id="@+id/activity_measure_content_textview"
+                android:id="@+id/measure_content_textview"
                 style="@style/EventDetailSectionContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/activity_measure_title_textview"
                 android:text="Las medidas preventivas de la actividad:" />
+                android:layout_below="@id/measure_title_textview"
 
         </RelativeLayout>
 
