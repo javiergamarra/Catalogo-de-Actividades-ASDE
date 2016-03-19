@@ -18,8 +18,11 @@ public class Measure implements Serializable {
 
     @Override
     public String toString() {
-        return "Debes: ".concat(should)
-                .concat("No puedes: ").concat(cant)
-                .concat("Condiciones: ").concat(conditions);
+        return "Debes: "
+                .concat(should)
+                .concat("No puedes: ")
+                .concat(cant)
+                .concat("Condiciones: ")
+                .concat(conditions);
     }
 }
