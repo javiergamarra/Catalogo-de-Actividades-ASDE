@@ -64,7 +64,7 @@ public class Event implements Serializable {
     public String getCharacteristicsAsString() {
         StringBuilder builder = new StringBuilder();
         for (String details : characteristics) {
-            builder.append(details + "\n");
+            builder.append(details).append("\n");
         }
         return builder.toString();
     }
