@@ -1,8 +1,5 @@
 package com.nhpatt.asde.mvp.presenters;
 
-import android.util.Log;
-
-import com.nhpatt.asde.async.RetrofitAPI;
 import com.nhpatt.asde.async.interactors.EventListInteractor;
 import com.nhpatt.asde.models.Event;
 
