@@ -19,7 +19,7 @@
             android:background="?attr/colorPrimary"
             app:layout_collapseMode="pin"
             app:layout_scrollFlags="scroll|enterAlways"
-            app:title="Nombre Actividad"
+            app:title="@string/event_name"
             app:titleTextColor="@android:color/white" />
 
 
@@ -32,8 +32,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context="com.nhpatt.asde.mvp.activities.EventDetailActivity">
@@ -45,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:gravity="center_horizontal"
-                android:text="DESCRIPCION"
+                android:text="@string/description"
                 android:textColor="@android:color/white" />
 
             <TextView
@@ -55,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/description_title_textview"
                 android:gravity="center_vertical"
-                android:hint="La descripcion de la actividad" />
+                android:hint="@string/event_description" />
 
             <TextView
                 android:id="@+id/characteristics_title_textview"
@@ -64,15 +63,15 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/description_content_textview"
                 android:gravity="center_horizontal"
-                android:text="CARACTERÍSTICAS" />
+                android:text="@string/characteristics" />
 
             <TextView
                 android:id="@+id/characteristics_content_textview"
                 style="@style/EventDetailSectionContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="las caracteristicas de la actividad" />
                 android:layout_below="@id/characteristics_title_textview"
+                android:text="@string/event_characteristics" />
 
             <TextView
                 android:id="@+id/measure_title_textview"
@@ -81,16 +80,15 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/characteristics_content_textview"
                 android:gravity="center_horizontal"
-                android:text="MEDIDAS PREVENTIVAS" />
-
+                android:text="@string/measures" />
 
             <TextView
                 android:id="@+id/measure_content_textview"
                 style="@style/EventDetailSectionContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Las medidas preventivas de la actividad:" />
                 android:layout_below="@id/measure_title_textview"
+                android:text="@string/event_measures" />
 
         </RelativeLayout>
 
