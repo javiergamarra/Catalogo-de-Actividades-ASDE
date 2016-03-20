@@ -17,24 +17,23 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            android:titleTextColor="@android:color/white"
-            app:layout_scrollFlags="scroll|enterAlways">
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:titleTextColor="@android:color/white">
 
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
 
-
-    <FrameLayout
+    <android.support.v4.widget.NestedScrollView
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
 
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
+                android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context="com.nhpatt.asde.mvp.activities.EventDetailActivity">
 
@@ -87,5 +86,6 @@
 
         </RelativeLayout>
 
-    </FrameLayout>
+    </android.support.v4.widget.NestedScrollView>
+
 </android.support.design.widget.CoordinatorLayout>
