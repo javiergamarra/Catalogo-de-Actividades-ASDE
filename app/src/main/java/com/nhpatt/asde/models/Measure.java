@@ -15,4 +15,11 @@ public class Measure implements Serializable {
     private String cant;
     @SerializedName(value = "condiciones")
     private String conditions;
+
+    @Override
+    public String toString() {
+        return "Debes:".concat("should")
+                .concat("No puedes:").concat(cant)
+                .concat("Condiciones:").concat(conditions);
+    }
 }

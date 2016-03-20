@@ -12,6 +12,6 @@ public class EventInteractor extends AbstractInteractor {
     @Override
     public Observable run(Object... arguments) {
         ApiaryService apiaryService = getApiary().create(ApiaryService.class);
-        return apiaryService.eventWithId((String) arguments[0]);
+        return apiaryService.getEventWithId((String) arguments[0]);
     }
 }

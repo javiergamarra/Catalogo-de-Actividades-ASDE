@@ -11,8 +11,8 @@ import rx.Observable;
 public interface ApiaryService {
 
     @GET("/activities")
-    Observable<List<Event>> events();
+    Observable<List<Event>> getEventList();
 
     @GET("/activities/{id}")
-    Observable<Event> eventWithId(@Path("id") String id);
+    Observable<Event> getEventWithId(@Path("id") String id);
 }

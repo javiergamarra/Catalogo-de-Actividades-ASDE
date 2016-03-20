@@ -1,5 +1,8 @@
 package com.nhpatt.asde.mvp.presenters;
 
+import android.util.Log;
+
+import com.nhpatt.asde.async.RetrofitAPI;
 import com.nhpatt.asde.async.interactors.EventListInteractor;
 import com.nhpatt.asde.models.Event;
 
@@ -13,7 +16,7 @@ import rx.Observable;
 
 public class EventListPresenter extends PresenterImpl {
 
-    private static Observable<List<Event>> observable = new EventListInteractor().runInBackground();
+    private static Observable<List<Event>> eventList_observable = new EventListInteractor().runInBackground();
 
     private final EventListView eventListView;
 
@@ -22,7 +25,9 @@ public class EventListPresenter extends PresenterImpl {
     }
 
     public void searchEventList() {
-        observable.compose(bindToLifecycle()).subscribe(this::eventListRetrieved, this::errorRetrievingInfo);
+        eventList_observable
+                .compose(bindToLifecycle())
+                .subscribe(this::eventListRetrieved, this::errorRetrievingInfo);
     }
 
     public void errorRetrievingInfo(Throwable throwable) {
