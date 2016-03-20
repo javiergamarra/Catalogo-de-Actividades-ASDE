@@ -13,8 +13,6 @@ import rx.Observable;
 
 public class EventListPresenter extends PresenterImpl {
 
-    private static Observable<List<Event>> observable = new EventListInteractor().runInBackground();
-
     private final EventListView eventListView;
 
     public EventListPresenter(EventListView eventListView) {
@@ -22,7 +20,9 @@ public class EventListPresenter extends PresenterImpl {
     }
 
     public void searchEventList() {
-        observable.compose(bindToLifecycle()).subscribe(this::eventListRetrieved, this::errorRetrievingInfo);
+        Observable<List<Event>> eventListObs = new EventListInteractor().run();
+        Observable<List<Event>> cachedEventListObs = getCachedBackgroundObservable("EVENTS", eventListObs);
+        cachedEventListObs.subscribe(this::eventListRetrieved, this::errorRetrievingInfo);
     }
 
     public void errorRetrievingInfo(Throwable throwable) {
