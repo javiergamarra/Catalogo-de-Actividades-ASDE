@@ -27,6 +27,8 @@ public abstract class AbstractActivity<P extends Presenter> extends AppCompatAct
 
         this.presenter = createPresenter();
         presenter.onCreate(savedInstanceState);
+
+        presenter.setPersistedObject((PersistedObject) getLastCustomNonConfigurationInstance());
     }
 
     @Override
@@ -59,4 +61,8 @@ public abstract class AbstractActivity<P extends Presenter> extends AppCompatAct
         presenter.onDestroy();
     }
 
+    @Override
+    public Object onRetainCustomNonConfigurationInstance() {
+        return presenter.getPersistedObject();
+    }
 }
