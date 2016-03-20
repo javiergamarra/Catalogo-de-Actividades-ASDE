@@ -1,6 +1,5 @@
 package com.nhpatt.asde.mvp.activities;
 
-import android.content.res.ObbInfo;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
@@ -30,6 +29,10 @@ public class EventDetailActivity extends AbstractActivity<EventDetailPresenter>
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
 
         bindViews();
 
@@ -59,7 +62,7 @@ public class EventDetailActivity extends AbstractActivity<EventDetailPresenter>
     public void show(Event object) {
         toolbar.setTitle(object.getName());
         activityDescriptionContentTextView.setText(object.getDescription());
-        activityCharacteristicsContentView.setText(object.getCharacteristics().toString());
+        activityCharacteristicsContentView.setText(object.getCharacteristicsAsString());
         activityMeasuresTitleContentView.setText(object.getMeasure().toString());
 
     }
