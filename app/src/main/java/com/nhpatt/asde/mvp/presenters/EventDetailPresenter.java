@@ -17,9 +17,12 @@ public class EventDetailPresenter extends PresenterImpl {
     }
 
     public void searchEvent(String eventId) {
-        Observable<Event> eventInteractor = new EventInteractor().run(eventId);
-        Observable<Event> cachedEventObs = getCachedBackgroundObservable(eventId, eventInteractor);
-        cachedEventObs.subscribe(this::eventRetrieved);
+        Observable<Event> cachedEventObs = getCachedObservable(
+                eventId, new EventInteractor().searchById(eventId));
+        cachedEventObs.subscribe(this::eventRetrieved, (t) -> {
+            invalidateObservable(eventId);
+            eventDetailView.showError("Error retrieving item");
+        });
     }
 
     public void eventRetrieved(Event object) {
@@ -28,6 +31,8 @@ public class EventDetailPresenter extends PresenterImpl {
 
     public interface EventDetailView {
         void show(Event object);
+
+        void showError(String message);
     }
 
 }
