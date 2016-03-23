@@ -1,6 +1,9 @@
 package com.nhpatt.asde.async.interactors;
 
 import com.nhpatt.asde.async.services.ApiaryService;
+import com.nhpatt.asde.models.Event;
+
+import java.util.List;
 
 import rx.Observable;
 
@@ -9,8 +12,13 @@ import rx.Observable;
  */
 public class EventInteractor extends AbstractInteractor {
 
-    public Observable run(String eventId) {
-        ApiaryService apiaryService = getApiary().create(ApiaryService.class);
+    private ApiaryService apiaryService = getApiary().create(ApiaryService.class);
+
+    public Observable<List<Event>> search() {
+        return apiaryService.getEventList();
+    }
+
+    public Observable searchById(String eventId) {
         return apiaryService.getEventWithId(eventId);
     }
 }
