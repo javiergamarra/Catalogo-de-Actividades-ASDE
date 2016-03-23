@@ -32,14 +32,12 @@ public class EventDetailActivity extends AbstractActivity<EventDetailPresenter>
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
-
         bindViews();
 
         if (getIntent().getSerializableExtra("event") != null) {
             Event event = (Event) getIntent().getExtras().get("event");
             show(event);
-            //getPresenter().searchEvent(event.getId());
+//            getPresenter().searchEvent(event.getId());
         }
     }
 

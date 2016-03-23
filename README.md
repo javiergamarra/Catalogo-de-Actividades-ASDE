@@ -6,5 +6,4 @@ Aplicación para la Asociación de Scouts de España
 
 * Add fragment examples
 * Packages by domain
-* Finish Rx integration
 * Add tests
