@@ -61,6 +61,14 @@ public class Event implements Serializable {
         this.characteristics = characteristics;
     }
 
+    public String getCharacteristicsAsString() {
+        StringBuilder builder = new StringBuilder();
+        for (String details : characteristics) {
+            builder.append(details).append("\n");
+        }
+        return builder.toString();
+    }
+
     public String getRiskLevel() {
         return riskLevel;
     }
