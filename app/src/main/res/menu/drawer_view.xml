@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_event_list"
+            android:checked="true"
+            android:title="Lista Actividades" />
+        <item
+            android:id="@+id/nav_about_app"
+            android:title="About" />
+        <item
+            android:id="@+id/nav_feedback_app"
+            android:title="Feedback" />
+    </group>
+</menu>

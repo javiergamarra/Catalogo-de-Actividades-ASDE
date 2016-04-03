@@ -36,6 +36,11 @@ android {
     }
 }
 
+retrolambda {
+    oldJdk JAVA7_HOME
+    jdk JAVA8_HOME
+}
+
 dependencies {
 
     compile fileTree(dir: 'libs', include: ['*.jar'])

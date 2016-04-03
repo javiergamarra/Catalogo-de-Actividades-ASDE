@@ -12,7 +12,7 @@ import rx.Observable;
  */
 public class EventInteractor extends AbstractInteractor {
 
-    private ApiaryService apiaryService = getApiary().create(ApiaryService.class);
+    private final ApiaryService apiaryService = getApiary().create(ApiaryService.class);
 
     public Observable<List<Event>> search() {
         return apiaryService.getEventList();
