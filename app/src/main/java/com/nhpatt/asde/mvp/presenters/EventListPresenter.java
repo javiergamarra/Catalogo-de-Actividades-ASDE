@@ -1,6 +1,6 @@
 package com.nhpatt.asde.mvp.presenters;
 
-import com.nhpatt.asde.async.interactors.EventListInteractor;
+import com.nhpatt.asde.async.interactors.EventInteractor;
 import com.nhpatt.asde.models.Event;
 
 import java.util.List;
@@ -13,6 +13,7 @@ import rx.Observable;
 
 public class EventListPresenter extends PresenterImpl {
 
+    public static final String KEY = "EVENTS";
     private final EventListView eventListView;
 
     public EventListPresenter(EventListView eventListView) {
@@ -20,12 +21,12 @@ public class EventListPresenter extends PresenterImpl {
     }
 
     public void searchEventList() {
-        Observable<List<Event>> eventInteractor = new EventListInteractor().run();
-        Observable<List<Event>> cachedEventObs = getCachedBackgroundObservable("EVENTS", eventInteractor);
+        Observable<List<Event>> cachedEventObs = getCachedObservable(KEY, new EventInteractor().search());
         cachedEventObs.subscribe(this::eventListRetrieved, this::errorRetrievingInfo);
     }
 
     public void errorRetrievingInfo(Throwable throwable) {
+        invalidateObservable("EVENTS");
         eventListView.showError("Error retrieving list of items");
     }
 

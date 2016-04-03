@@ -9,8 +9,6 @@ import com.trello.rxlifecycle.ActivityEvent;
 import com.trello.rxlifecycle.ActivityLifecycleProvider;
 import com.trello.rxlifecycle.RxLifecycle;
 
-import java.util.HashMap;
-
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -21,7 +19,7 @@ public class PresenterImpl implements Presenter, ActivityLifecycleProvider {
     private final BehaviorSubject<ActivityEvent> lifecycleSubject = BehaviorSubject.create();
     private PersistedObject persistedObject = new PersistedObject();
 
-    protected Observable getCachedBackgroundObservable(String key, Observable observable) {
+    protected Observable getCachedObservable(String key, Observable observable) {
         if (getPersistedObject().getInteractors().containsKey(key)) {
             return getPersistedObject().getInteractors().get(key);
         } else {
@@ -29,6 +27,10 @@ public class PresenterImpl implements Presenter, ActivityLifecycleProvider {
             getPersistedObject().getInteractors().put(key, obs);
             return obs;
         }
+    }
+
+    protected void invalidateObservable(String key) {
+        getPersistedObject().getInteractors().remove(key);
     }
 
     @NonNull

@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.Toast;
 
 import com.nhpatt.asde.R;
 import com.nhpatt.asde.models.Event;
@@ -45,8 +44,6 @@ public class EventListActivity extends AbstractActivity<EventListPresenter>
 
     @Override
     public void click(Event event) {
-        Toast.makeText(this, "Click", Toast.LENGTH_SHORT).show();
-
         Intent intent = new Intent(this, EventDetailActivity.class);
         intent.putExtra("event", event);
         startActivity(intent);
