@@ -3,7 +3,7 @@
     package="com.nhpatt.asde">
 
     <uses-permission android:name="android.permission.INTERNET" />
-	
+
     <application
         android:name=".mvp.CatalogApplication"
         android:allowBackup="true"
