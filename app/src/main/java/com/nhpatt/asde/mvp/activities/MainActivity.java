@@ -1,31 +1,21 @@
 package com.nhpatt.asde.mvp.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.nhpatt.asde.R;
-import com.nhpatt.asde.models.Event;
 import com.nhpatt.asde.mvp.fragments.EventListFragment;
-import com.nhpatt.asde.mvp.presenters.EventListPresenter;
 
-import java.util.List;
-
-public class MainActivity extends AbstractActivity<EventListPresenter>
-        implements EventListPresenter.EventListView, EventListener {
+public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawer;
-    private Toolbar toolbar;
     private NavigationView nvDrawer;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,40 +25,12 @@ public class MainActivity extends AbstractActivity<EventListPresenter>
         setupDrawerContent(nvDrawer);
     }
 
-
     protected void setupActivity() {
 
         // Find our drawer view
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         nvDrawer = (NavigationView) findViewById(R.id.nvView);
     }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        getPresenter().searchEventList();
-    }
-
-    @Override
-    protected EventListPresenter createPresenter() {
-        return new EventListPresenter(this);
-    }
-
-    @Override
-    public void show(final List<Event> events) {
-        RecyclerView eventRecyclerView = (RecyclerView) findViewById(R.id.event_recycler);
-        eventRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        eventRecyclerView.setAdapter(new EventsAdapter(events, this));
-    }
-
-    @Override
-    public void click(Event event) {
-        Intent intent = new Intent(this, EventDetailActivity.class);
-        intent.putExtra("event", event);
-        startActivity(intent);
-    }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -82,29 +44,18 @@ public class MainActivity extends AbstractActivity<EventListPresenter>
         return super.onOptionsItemSelected(item);
     }
 
-    // `onPostCreate` called when activity start-up is complete after `onStart()`
-    // NOTE! Make sure to override the method with only a single `Bundle` argument
-    @Override
-    protected void onPostCreate(Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
-    }
-
-
     private void setupDrawerContent(NavigationView navigationView) {
         navigationView.setNavigationItemSelectedListener(
-                new NavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(MenuItem menuItem) {
-                        selectDrawerItem(menuItem);
-                        return true;
-                    }
+                menuItem -> {
+                    selectDrawerItem(menuItem);
+                    return true;
                 });
     }
 
     public void selectDrawerItem(MenuItem menuItem) {
         // Create a new fragment and specify the fragment to show based on nav item clicked
         Fragment fragment = null;
-        Class fragmentClass = Fragment.class;
+        Class fragmentClass;
         switch (menuItem.getItemId()) {
             case R.id.nav_event_list:
                 fragmentClass = EventListFragment.class;

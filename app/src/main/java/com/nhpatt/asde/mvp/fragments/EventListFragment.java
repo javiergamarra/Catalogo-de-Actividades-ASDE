@@ -3,12 +3,14 @@ package com.nhpatt.asde.mvp.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.nhpatt.asde.R;
 import com.nhpatt.asde.models.Event;
-import com.nhpatt.asde.mvp.activities.AbstractActivity;
 import com.nhpatt.asde.mvp.activities.EventDetailActivity;
 import com.nhpatt.asde.mvp.activities.EventListener;
 import com.nhpatt.asde.mvp.activities.EventsAdapter;
@@ -19,37 +21,39 @@ import java.util.List;
 /**
  * @author Hugo Nebreda
  */
-public class EventListFragment extends AbstractActivity<EventListPresenter>
+public class EventListFragment extends AbstractFragment<EventListPresenter>
         implements EventListPresenter.EventListView, EventListener {
 
+    private RecyclerView eventRecyclerView;
+
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.event_list);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.event_list, container, false);
+        eventRecyclerView = (RecyclerView) view.findViewById(R.id.event_recycler);
+        return view;
     }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        getPresenter().searchEventList();
-    }
-
+    
     @Override
     protected EventListPresenter createPresenter() {
         return new EventListPresenter(this);
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+
+        getPresenter().searchEventList();
+    }
+
+    @Override
     public void show(final List<Event> events) {
-        RecyclerView eventRecyclerView = (RecyclerView) findViewById(R.id.event_recycler);
-        eventRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         eventRecyclerView.setAdapter(new EventsAdapter(events, this));
     }
 
     @Override
     public void click(Event event) {
-        Intent intent = new Intent(this, EventDetailActivity.class);
+        Intent intent = new Intent(getActivity(), EventDetailActivity.class);
         intent.putExtra("event", event);
         startActivity(intent);
     }
