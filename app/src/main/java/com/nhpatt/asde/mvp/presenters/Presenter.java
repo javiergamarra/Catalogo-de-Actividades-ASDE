@@ -21,4 +21,6 @@ public interface Presenter {
     PersistedObject getPersistedObject();
 
     void setPersistedObject(PersistedObject lastCustomNonConfigurationInstance);
+
+    void setFragment(boolean isFragment);
 }
