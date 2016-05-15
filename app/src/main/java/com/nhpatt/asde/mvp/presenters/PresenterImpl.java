@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import com.nhpatt.asde.mvp.activities.PersistedObject;
 import com.trello.rxlifecycle.ActivityEvent;
 import com.trello.rxlifecycle.ActivityLifecycleProvider;
+import com.trello.rxlifecycle.LifecycleTransformer;
 import com.trello.rxlifecycle.RxLifecycle;
 
 import rx.Observable;
@@ -54,14 +55,14 @@ public class PresenterImpl implements Presenter, ActivityLifecycleProvider {
     @Override
     @NonNull
     @CheckResult
-    public final <T> Observable.Transformer<T, T> bindUntilEvent(@NonNull ActivityEvent event) {
+    public final <T> LifecycleTransformer<T> bindUntilEvent(@NonNull ActivityEvent event) {
         return RxLifecycle.bindUntilEvent(lifecycleSubject, event);
     }
 
     @Override
     @NonNull
     @CheckResult
-    public final <T> Observable.Transformer<T, T> bindToLifecycle() {
+    public final <T> LifecycleTransformer<T> bindToLifecycle() {
         return RxLifecycle.bindActivity(lifecycleSubject);
     }
 
