@@ -7,4 +7,6 @@
     <string name="event_characteristics">las caracteristicas de la actividad</string>
     <string name="measures">MEDIDAS PREVENTIVAS</string>
     <string name="event_measures">Las medidas preventivas de la actividad:</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>
