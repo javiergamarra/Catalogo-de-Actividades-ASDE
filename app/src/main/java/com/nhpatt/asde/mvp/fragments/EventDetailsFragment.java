@@ -37,7 +37,7 @@ public class EventDetailsFragment extends AbstractFragment<EventDetailPresenter>
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.event_detail_fragment, container, false);
+        View view = inflater.inflate(R.layout.event_detail, container, false);
         return view;
     }
 
@@ -79,5 +79,6 @@ public class EventDetailsFragment extends AbstractFragment<EventDetailPresenter>
         characteristicsContentView = (TextView) getActivity().findViewById(R.id.characteristics_content_textview);
         measuresTitleContentView = (TextView) getActivity().findViewById(R.id.measure_content_textview);
     }
+
 }
 

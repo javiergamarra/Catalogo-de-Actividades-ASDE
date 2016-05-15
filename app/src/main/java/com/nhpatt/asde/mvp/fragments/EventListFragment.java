@@ -1,7 +1,6 @@
 package com.nhpatt.asde.mvp.fragments;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
@@ -12,7 +11,6 @@ import android.view.ViewGroup;
 
 import com.nhpatt.asde.R;
 import com.nhpatt.asde.models.Event;
-import com.nhpatt.asde.mvp.activities.EventDetailActivity;
 import com.nhpatt.asde.mvp.activities.EventListener;
 import com.nhpatt.asde.mvp.activities.EventsAdapter;
 import com.nhpatt.asde.mvp.presenters.EventListPresenter;
@@ -45,9 +43,7 @@ public class EventListFragment extends AbstractFragment<EventListPresenter>
     @Override
     public void onResume() {
         super.onResume();
-
         progressList.setVisibility(View.VISIBLE);
-
         getPresenter().searchEventList();
     }
 
@@ -60,7 +56,7 @@ public class EventListFragment extends AbstractFragment<EventListPresenter>
     @Override
     public void click(Event event) {
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.flContent, EventDetailsFragment.newInstance(event)).commit();
+        fragmentManager.beginTransaction().replace(R.id.flContent, EventDetailsFragment.newInstance(event)).addToBackStack(event.getName()).commit();
 
     }
 }
