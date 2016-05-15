@@ -25,15 +25,17 @@ public class EventListFragment extends AbstractFragment<EventListPresenter>
         implements EventListPresenter.EventListView, EventListener {
 
     private RecyclerView eventRecyclerView;
+    private View progressList;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.event_list, container, false);
         eventRecyclerView = (RecyclerView) view.findViewById(R.id.event_recycler);
+        progressList = view.findViewById(R.id.progress_list);
         return view;
     }
-    
+
     @Override
     protected EventListPresenter createPresenter() {
         return new EventListPresenter(this);
@@ -43,11 +45,14 @@ public class EventListFragment extends AbstractFragment<EventListPresenter>
     public void onResume() {
         super.onResume();
 
+        progressList.setVisibility(View.VISIBLE);
+
         getPresenter().searchEventList();
     }
 
     @Override
     public void show(final List<Event> events) {
+        progressList.setVisibility(View.GONE);
         eventRecyclerView.setAdapter(new EventsAdapter(events, this));
     }
 
