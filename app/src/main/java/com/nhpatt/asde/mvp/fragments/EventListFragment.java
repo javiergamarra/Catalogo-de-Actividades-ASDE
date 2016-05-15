@@ -4,6 +4,7 @@ package com.nhpatt.asde.mvp.fragments;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,9 +59,9 @@ public class EventListFragment extends AbstractFragment<EventListPresenter>
 
     @Override
     public void click(Event event) {
-        Intent intent = new Intent(getActivity(), EventDetailActivity.class);
-        intent.putExtra("event", event);
-        startActivity(intent);
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.flContent, EventDetailsFragment.newInstance(event)).commit();
+
     }
 }
 
