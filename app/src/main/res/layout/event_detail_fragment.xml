@@ -1,0 +1,97 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.nhpatt.asde.mvp.activities.EventDetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/event_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:title="@string/event_name"
+            app:titleTextColor="@android:color/white" />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.nhpatt.asde.mvp.activities.EventDetailActivity">
+
+            <TextView
+                android:id="@+id/description_title_textview"
+                style="@style/EventDetailSectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center_horizontal"
+                android:text="@string/description"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/description_content_textview"
+                style="@style/EventDetailSectionContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/description_title_textview"
+                android:gravity="center_vertical"
+                android:hint="@string/event_description" />
+
+            <TextView
+                android:id="@+id/characteristics_title_textview"
+                style="@style/EventDetailSectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/description_content_textview"
+                android:gravity="center_horizontal"
+                android:text="@string/characteristics" />
+
+            <TextView
+                android:id="@+id/characteristics_content_textview"
+                style="@style/EventDetailSectionContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/characteristics_title_textview"
+                android:text="@string/event_characteristics" />
+
+            <TextView
+                android:id="@+id/measure_title_textview"
+                style="@style/EventDetailSectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/characteristics_content_textview"
+                android:gravity="center_horizontal"
+                android:text="@string/measures" />
+
+            <TextView
+                android:id="@+id/measure_content_textview"
+                style="@style/EventDetailSectionContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/measure_title_textview"
+                android:text="@string/event_measures" />
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
