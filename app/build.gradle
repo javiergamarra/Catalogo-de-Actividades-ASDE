@@ -36,10 +36,10 @@ android {
     }
 }
 
-retrolambda {
-    oldJdk JAVA7_HOME
-    jdk JAVA8_HOME
-}
+//retrolambda {
+//    oldJdk JAVA7_HOME
+//    jdk JAVA8_HOME
+//}
 
 dependencies {
 
