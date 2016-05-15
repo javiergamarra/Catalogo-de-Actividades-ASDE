@@ -3,7 +3,6 @@ package com.nhpatt.asde.mvp.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +12,7 @@ import com.nhpatt.asde.R;
 import com.nhpatt.asde.models.Event;
 import com.nhpatt.asde.mvp.activities.EventListener;
 import com.nhpatt.asde.mvp.activities.EventsAdapter;
+import com.nhpatt.asde.mvp.activities.MainActivity;
 import com.nhpatt.asde.mvp.presenters.EventListPresenter;
 
 import java.util.List;
@@ -55,9 +55,7 @@ public class EventListFragment extends AbstractFragment<EventListPresenter>
 
     @Override
     public void click(Event event) {
-        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.flContent, EventDetailsFragment.newInstance(event)).addToBackStack(event.getName()).commit();
-
+        ((MainActivity) getActivity()).goToDetail(event);
     }
 }
 

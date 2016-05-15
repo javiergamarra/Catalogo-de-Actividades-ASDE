@@ -13,18 +13,21 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.nhpatt.asde.R;
+import com.nhpatt.asde.models.Event;
+import com.nhpatt.asde.mvp.fragments.EventDetailsFragment;
 import com.nhpatt.asde.mvp.fragments.EventListFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -36,7 +39,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        onNavigationItemSelected(navigationView.getMenu().getItem(0));
+        if (savedInstanceState == null) {
+            onNavigationItemSelected(navigationView.getMenu().getItem(0));
+        }
     }
 
     @Override
@@ -53,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         // Insert the fragment by replacing any existing fragment
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.flContent, getFragment(item)).commit();
+        fragmentManager.beginTransaction().replace(R.id.fragment_placeholder, getFragment(item)).commit();
 
         // Highlight the selected item has been done by NavigationView
         item.setChecked(true);
@@ -77,4 +82,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return new EventListFragment();
         }
     }
+
+    public void goToDetail(Event event) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager
+                .beginTransaction()
+                .replace(R.id.fragment_placeholder, EventDetailsFragment.newInstance(event))
+                .addToBackStack(event.getName())
+                .commit();
+//        setTitle(event.getName());
+
+        toolbar.setNavigationOnClickListener(v -> {
+            fragmentManager.popBackStack();
+//            setTitle("Catálogo de Actividades");
+        });
+    }
+
 }
