@@ -6,13 +6,15 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.View;
 
-import com.nhpatt.asde.mvp.activities.PersistedObject;
 import com.nhpatt.asde.mvp.presenters.Presenter;
 
 
 public abstract class AbstractFragment<P extends Presenter> extends Fragment {
 
+    protected boolean destroyedBySystem;
     private P presenter;
+    private RetainedFragment retainFragment;
+    private String tag = getClass().getCanonicalName();
 
     protected P getPresenter() {
         return presenter;
@@ -26,13 +28,15 @@ public abstract class AbstractFragment<P extends Presenter> extends Fragment {
     }
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
-        this.presenter = createPresenter();
+        presenter = createPresenter();
+        presenter.setFragment(true);
         presenter.onCreate(savedInstanceState);
 
-        presenter.setPersistedObject((PersistedObject) getActivity().getLastCustomNonConfigurationInstance());
+        retainFragment = RetainedFragment.findOrCreate(getFragmentManager(), tag);
+        presenter.setPersistedObject(retainFragment.getPersistedObject());
     }
 
     @Override
@@ -44,7 +48,15 @@ public abstract class AbstractFragment<P extends Presenter> extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+
+        destroyedBySystem = false;
         presenter.onResume();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        destroyedBySystem = true;
     }
 
     @Override
@@ -61,9 +73,15 @@ public abstract class AbstractFragment<P extends Presenter> extends Fragment {
 
     @Override
     public void onDestroy() {
+        if (destroyedBySystem) {
+            retainFragment.setPersistedObject(presenter.getPersistedObject());
+        } else {
+            retainFragment.remove(getFragmentManager());
+            retainFragment.setPersistedObject(null);
+            retainFragment = null;
+        }
         super.onDestroy();
         presenter.onDestroy();
     }
-
 
 }
