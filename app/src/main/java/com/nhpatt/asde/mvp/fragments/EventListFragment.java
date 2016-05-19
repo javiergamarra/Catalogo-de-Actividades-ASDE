@@ -57,6 +57,12 @@ public class EventListFragment extends AbstractFragment<EventListPresenter>
     }
 
     @Override
+    public void showError(String message) {
+        progressList.setVisibility(View.GONE);
+        super.showError(message);
+    }
+
+    @Override
     public void click(Event event) {
         Intent intent = new Intent(getActivity(), EventDetailActivity.class);
         intent.putExtra("event", event);
