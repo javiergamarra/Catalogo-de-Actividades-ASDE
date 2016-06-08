@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fragmentManager.popBackStack();
 //            setTitle("Catálogo de Actividades");
         });
+
     }
 
 }

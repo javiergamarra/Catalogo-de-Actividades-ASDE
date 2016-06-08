@@ -15,4 +15,7 @@ public interface ApiaryService {
 
     @GET("/activities/{id}")
     Observable<Event> getEventWithId(@Path("id") String id);
+
+    @GET("/test")
+    String doTest();
 }

@@ -1,0 +1,277 @@
+[
+  {
+    "id": 1,
+    "titulo": "REUNIÓN ORDINARIA",
+    "descripcion": "Se trata de la actividad ordinaria de las realizadas en las secciones consistente en el encuentro de toda la sección, la asamblea de sección completa, el encuentro de los Scouts que se celebra habitualmente en los locales de sección de la base del grupo scout por secciones durante el curso escolar/ronda solar. \nEs una actividad sedentaria de interior (generalmente) de una duración media de aproximadamente 2 horas que se lleva a cabo habitualmente los sábados por la tarde entre las 4:30.  y las 6:30 o 7:00. En ella se intercalan actividades según la edad (juegos, danzas, debates..), el momento del Proyecto en el que la sección se encuentre, etc.\nEs una actividad de continuidad (normalmente sigue algo dejado en un punto la semana anterior), controlada por adultos en una proporción mínima de un educador voluntario por cada diez participantes al menos. Los participantes son conocidos de los educadores (mas cuanto mas avanzada está la ronda), se conocen entre ellos y el lugar, los materiales suelen ser de peligrosidad baja (boligrafos, papeles, etc..). Cada local de cada grupo cuenta con distintas medidas de seguridad y posibilidades de evacuación según su configuración.\nLos contenidos que se trabajan en ellas, tiempos y las estrategias metodológicas tienen relación con los contenidos educativos de la sección y etapa y el momento del Proyecto de sección en que se encuentren dentro de la programación (juegos, debates, cineforums, talleres, charlas, dinámicas de grupos, asambleas de sección, etc..) \nSegún estos contenidos y momentos se dan distintos tipos de reuniones con diferencias a tener en cuenta en materia de prevención de riesgos:\na.  Reuniones de evaluación, de programación, etc.. \nb.  Exteriores/interiores, con o sin mobiliario, etc..\nc.  En locales/en acampada\nd.  Según secciones \ne.  Sub reuniones en pequeño grupo.\n",
+    "caracteristicas": [
+      "Actividad de duración media de 2 horas o dos horas y media.",
+      "Generalmente los sábados por la tarde.",
+      "Se desarrolla en los locales del grupo (salas en centros cívicos, sedes en colegios, parroquias, locales cedidos en barrios, etc-..)",
+      "Como regla general los locales están en unas condiciones de uso suficientes y cuentan con un mobiliario adecuado aunque no moderno (como regla general), accesos, salidas, instalaciones eléctricas, etc...",
+      "La mayor parte de la dinámica usada suele ser sedentaria y salpicada con actividades dinámicas.",
+      "El Grupo que se reúne (depende de la edad/sección) está en torno a los entre 10 y 25 miembros como regla general.",
+      "Las actividades siempre están acompañadas de adultos en proporción suficiente.",
+      "Los participantes –Scouts- (en progresión proporcional con la edad/sección) participan activamente de las decisiones de gestión y programación."
+    ],
+    "nivelDeRiesgo": "TOLERABLE",
+    "medidasPreventivas": {
+      "debes": "Asegurarte de que los materiales de fortuna usados (mobiliario sobre todo) no revistan peligrosidad (puntas sobresalientes, sujeción, etc..) – revisiones periódicas, sustitución de materiales viejos-",
+      "noPuedes": "Permitir que los debates y discusiones deriven en enfrentamientos físicos, ni que se lleven a cabo acciones humillantes, vejatorias o denigrantes para ninguno de los asistentes.Llevar a cabo dinámicas con materiales peligrosos (explosivos, combustibles, etc..)",
+      "condiciones": "Un adulto (voluntario educador) presente. Ha de haber en el local un botiquín básicoLas salidas deben estar expeditas y despejadas para caso de ser necesario usarlasHa de haber extintores en uso adecuado a la vista."
+    }
+  },
+  {
+    "id": 2,
+    "titulo": "REUNIÓN DE PEQUEÑO GRUPO",
+    "descripcion": "Se trata de la reunión  de los propios Scouts sin la supervisión directa de su educador/es a través de la cual se auto gestionan, organizan internamente, programan, toman sus decisiones, etc..El grado de intensidad de esta autogestión es proporcional a la edad/sección en la que se encuentren. En castores estas reuniones son poco frecuentes, en Tropa mucho.  \nLas características que la diferencian de la reunión ordinaria son:\n-  No se reúne toda la sección, solo cada pequeño grupo (patrulla, equipo, etc.). El número de participantes por tanto es mucho menor: entre 4 y 8 personas.\n-  Se reúnen generalmente sin supervisión de adulto. La dirigen ellos mismos mediante su estructura interna de cargos (guía, seisenera, etc..)\n-  Aunque ordinariamente se reúnen en los locales el grupo y sección (rincón de patrulla, cueva rover, etc..) es posible que estas reuniones se lleven a cabo en otros entornos (casa de alguno de ellos, un bar, etc..)\nEs una actividad sedentaria de interior (generalmente) de una duración media de aproximadamente 1 o 2 horas.\nLos participantes se conocen entre ellos y el lugar, los materiales suelen ser de peligrosidad baja (boligrafos, papeles, etc..). Hay una cierta estructura aceptada. Cada local de cada grupo cuenta con distintas medidas de seguridad y posibilidades de evacuación según su configuración.\nLos contenidos que se trabajan en ellas, tiempos y las estrategias metodológicas tienen relación con los contenidos educativos de la sección y etapa y el momento del Proyecto de sección en que se encuentren dentro de la programación (juegos, debates, cineforums, talleres, charlas, dinámicas de grupos, asambleas de sección, etc..) \n",
+    "caracteristicas": [
+      "Actividad de duración media de 1 o 2 horas.",
+      "Sin horario ni periodicidad demasiado fija.",
+      "Se desarrolla generalmente en los locales del grupo (salas en centros cívicos, sedes en colegios, parroquias, locales cedidos en barrios, etc-..) aunque puede ser en otros lugares.",
+      "Como regla general los locales están en unas condiciones de uso suficientes y cuentan con un mobiliario adecuado aunque no moderno (como regla general), accesos, salidas, instalaciones eléctricas, etc...",
+      "La mayor parte de la dinámica usada suele ser sedentaria y salpicada con actividades dinámicas.",
+      "El Grupo que se reúne (depende de la edad/sección) está en torno a los entre 4 a 10 miembros como regla general.",
+      "Los participantes –Scouts- (en progresión proporcional con la edad/sección) gestionan directamente las decisiones de gestión y programación.."
+    ],
+    "nivelDeRiesgo": "TOLERABLE",
+    "medidasPreventivas": {
+      "debes": "Asegurarte de que los responsables de dirigir estas reuniones (guías, seiseneros, etc..) Se aseguren previamente de  que los materiales de fortuna usados (mobiliario sobre todo) no revistan peligrosidad (puntas sobresalientes, sujeción, etc..) – revisiones periódicas, sustitución de materiales viejos-",
+      "noPuedes": "Asegurarte de que los responsables de dirigir estas reuniones (guías, seiseneros, etc..) Se aseguren previamente de  que no se permita que los debates y discusiones deriven en enfrentamientos físicos, ni que se lleven a cabo acciones humillantes, vejatorias o denigrantes para ninguno de los asistentes.\nAsegurarte de que los responsables de dirigir estas reuniones (guías, seiseneros, etc..) Se aseguren previamente de  que no se van a llevar a cabo dinámicas con materiales peligrosos (explosivos, combustibles, etc..)",
+      "condiciones": "La mejor medida preventiva para estas actividades es el mantenimiento óptimo de las condiciones de uso de los locales: red electrica, almacenamiento de materiales, acceso a salidas y puertas de emergencia, etc..\nHa de haber en el local un botiquín básico\nLas salidas deben estar expeditas y despejadas para caso de ser necesario usarlas\nHa de haber extintores en uso adecuado a la vista."
+    }
+  },
+  {
+    "id": 3,
+    "titulo": "ACTOS COMUNITARIOS",
+    "descripcion": "Dinámica usada como acto formal de celebración que marca la apertura o el cierre de alguna parte de la programación.  Marca formalmente el comienzo o fin de algo o un momento concreto.\nTiene como esencia que se reúne todo el grupo. Se crea ambientación, se dan instrucciones y recordatorios, se motiva, felicitaciones, cumpleaños, avisos, etc.. Puede que se informa por secciones o pequeños grupos, se hagan gritos de patrulla y sección, alguna danza o pequeño energizer, etc.. Es posible que se cante como colofón.\nCuando se hace en el entorno urbano durante la ronda solar se suele llevar a cabo en las reuniones al principio de las mismas.\nLa más habitual de sus expresiones son los actos de inicio y fin del día en los campamentos, que en muchos casos reúnen a todo el grupo en la plaza del campamento. En los casos en que hay mástil con banderas se realiza en forma simbólica de izada o arriada de estas como indicación de comienzo y fin de actividades del día. Si es así alguno de los Scouts participa activamente izando o arriando.\nUna forma específica que se tratará monográficamente son las ceremonias.\nSe tratan aquí estos actos, aun teniendo en cuenta las diferencias según se lleven a cabo en el terreno natural o en el entorno urbano –climatología, actividades anteriores, etc..-, por las grandes similitudes que tiene como dinámica a pesar de este aspecto diferenciador.",
+    "caracteristicas": [
+      "Actividad formal (uniformidad, formación, silencio, etc..)",
+      "Actividad multitudinaria (todos los miembros del grupo presentes).",
+      "Aunque suele tener corta duración es un aspecto a vigilar dado que la posición (de pie) no es cómoda para larga duración.",
+      "La participación de los Scouts es pasiva."
+    ],
+    "nivelDeRiesgo": "TOLERABLE",
+    "medidasPreventivas": {
+      "debes": "Asegurarte de que la actividad no dure más de 20 minutos con exposición al sol o de pie.\nRevisar periódicamente que la instalación (en caso de haberla): mástil, plaza, acceso, altura, etc..- es estable y no hay posibilidad de desplome.",
+      "noPuedes": "",
+      "condiciones": "La mejor medida preventiva para estas actividades es la revisión frecuente de la instalación si la hay.\nLos discursos de motivación e información o instrucciones deben estar preparados convenientemente para ahorrar tiempo, se debe reducir la improvisación para evitar largas duraciones."
+    }
+  },
+  {
+    "id": 4,
+    "titulo": "JUEGOS ROMPEHIELOS",
+    "descripcion": "Dinámicas diseñadas y usadas para hacer presentaciones entre miembros del grupo, conocerse, tener un primer contacto, hacer equipos etc..\nSe usan habitualmente al principio de un programa de actividades (acampada, campamento, etc..) en que los participantes previamente no se conocían.\nNo son dinámicas muy frecuentes en Scouts dado que ellos suelen conocerse ya en las acampadas y campamentos del trabajo previo en la ronda. No obstante si son útiles en algunos casos:\n-  Cuando se juntan Scouts que no se conocían de antes: actividades inter ramas, Campamentos regionales, festivales, actividades comunes, hermanamientos, cursos de formación, sherpas., etc..\n-  Al principio de la ronda (primera reunión, acampada de inicio, etc..) para dar la bienvenida a los nuevos que se incorporan.\n- Etc.\nLos riesgos específicos dependerán de la metodología concreta usada (la dinámica)",
+    "caracteristicas": [
+      "Actividad con cierta formalidad y encorsetamiento inicial formal que se ve rápidamente superado.",
+      "Pensada para grupos de tamaño medio.",
+      "Muy variadas. Pueden ser de exterior o de interior (la misma dinámica)",
+      "Aunque suele tener corta duración es un aspecto a vigilar dado que la posición (de pie habitualmente) no es cómoda para larga duración.",
+      "La participación de los Scouts es moderadamente activa, implica generalmente cierto movimiento “deambulatorio” por la sala o espacio en que se jueguen hablando en pequeñas conversaciones en voz mas o menos baja para no molestar a los demás (al menos al principio y según la dinámica).",
+      "Ejemplos: Bingo, parejas de animales, filas por características, etc.."
+    ],
+    "nivelDeRiesgo": "TOLERABLE",
+    "medidasPreventivas": {
+      "debes": "Asegurarte de que la actividad no dure más de 20 minutos con exposición al sol o de pie.\nRevisar periódicamente que la instalación (en caso de haberla): mástil, plaza, acceso, altura, etc..- es estable y no hay posibilidad de desplome.",
+      "noPuedes": "",
+      "condiciones": "La mejor medida preventiva para estas actividades es la revisión previa de la instalación si la hay.\nLos discursos de instrucciones y explicación del juego y los materiales que vayan a hacer falta deben estar preparados convenientemente para ahorrar tiempo, se debe reducir la improvisación para evitar largas duraciones."
+    }
+  },
+  {
+    "id": 5,
+    "titulo": "VISITAS",
+    "descripcion": "Salidas del local o del sitio de acampada -Sea como parte de un programa (en acampada) o en la ronda habitual (en horario de reuniones)-.\nImplica movilización organizada del colectivo (sección, grupo..).\nEs de de corta duración –cerca- una mañana o una tarde. -No llega a ser una marcha (duración, contenido, objetivos, distancia, equipaje, etc.) ni si quiera una excursión (de día entero pero sin dormir)-. \nUna visita es por ejemplo salir de la base o local del grupo ir a ver una exposición y volver a la base (idem respecto al albergue o campamento base), una visita a otra tropa, al cine, museo, etc.. con lo que esta diversidad de destinos posibles conlleva desde el punto de vista de la prevención en cada caso.",
+    "caracteristicas": [
+      "Movilización del colectivo (traslado generalmente a pie por entorno urbano, vías transitadas o por travesías o carreteras de proximidad).",
+      "Corta duración (una mañana o una tarde)"
+    ],
+    "nivelDeRiesgo": "TOLERABLE",
+    "medidasPreventivas": {
+      "debes": "ASEGURARTE DE QUE el recorrido de aproximación sea proporcional a la edad de los scouts.\nLlevar teléfono móvil",
+      "noPuedes": "Llevar a cabo esta actividad sin las proporciones adecuadas de responsables y participantes",
+      "condiciones": "Tener previstos los posibles imprevistos de la actividad (ruta alternativa, chalecos reflectantes, horarios de visita, entradas etc..)"
+    }
+  },
+  {
+    "id": 6,
+    "titulo": "DEBATES, CINEFORUM/VIDEOFORUM, COMENTARIO DE IMÁGENES",
+    "descripcion": "Actividad generalmente de interior y sedentaria consistente en hacer reflexionar activamente a los participantes en la dinámica, fomentar el espíritu crítico, el pensamiento y opinión propia.\nSe desarrolla en torno a un tema central sobre el que ellos exponen e intercambian puntos de vista, opiniones, datos, etc.. se entrenan hábitos democráticos y de participación.\nEn ocasiones se apoya en visionados de imágenes, audiciones, lectura de textos, películas, documentales, etc. Otras veces es más activa como el juego del termómetro.\nUna modalidad es la del rol en el que no defienden en el debate sus posicionamientos sino los de un personaje asignado previamente (para trabajar empatía por ejemplo). También cabe la distribución en “bandos”",
+    "caracteristicas": [
+      "Actividad de posicionamiento personal, de reafirmación de posturas individuales, de creación de opinión propia. En ocasiones ello conlleva polarización de los planteamientos, extremismos, bandos, enfrentamiento, competitividad.",
+      "Corta duración (según la sección una o dos horas aproximadamente el debate en si mismo mas lo que dure el visionado previo)",
+      "Sedentaria (incluso en ocasiones con distribución concreta de los participantes en círculo, en mesa de reunión, etc..).",
+      "Es una dinámica muy socorrida y usada en reuniones ordinarias de ronda."
+    ],
+    "nivelDeRiesgo": "TOLERABLE",
+    "medidasPreventivas": {
+      "debes": "Comprobar la idoneidad de las tomas de electricidad y de los aparatos eléctricos usados, etc",
+      "noPuedes": "Permitir cerca bebidas, agua, etc. En caso de riesgo de eléctrico\nFavorecer/fomentar el enfrentamiento ni permitir que las posturas se polaricen sin control y se produzcan enfrentamientos personales, insultos, descalificaciones, e incluso agresiones.",
+      "condiciones": "Buscar las condiciones ergonómicas adecuadas (postura, duración de la actividad, distribución, comodidad, luz..)\nLas actividades sedentarias de duración superior a una hora no deben hacerse al sol si ello es posible. En caso contrario acceso a agua, crema solar, gorra, etc..\nMovimientos periódicos de desentumecimiento si no hay garantías de comodidad."
+    }
+  },
+  {
+    "id": 7,
+    "titulo": "DANZAS, BAILES, JUEGOS RÍTMICOS, ENERGIZERS, BAILES DEL MUNDO",
+    "descripcion": "Conjunto de actividades cuya esencia es su dinamismo y la exigencia de movimiento acompañando para ello de música en la mayoría de las ocasiones.\nSe usan con frecuencia como dinámica instrumental. Como desperezamiento y soltura de los músculos en actos comunitarios, como dinámica de enlace entre actuaciones en veladas y en los mismos actos comunitarios, como ejercicio de calentamiento ante una actividad que va a requerir esfuerzo físico, como calentamiento cuando hace frio, como mero recurso lúdico, como actividad rompehielos, etc..\nTambién se usan mucho para trabajar la coordinación psicomotriz y las habilidades musicales en las secciones menores.",
+    "caracteristicas": [
+      "Movimiento, dinamismo, uso del cuerpo como elemento fundamental.",
+      "Generalmente se trabaja con grupos mas o menos grandes, no con pequeños grupos.",
+      "Generalmente requiere uso de música."
+    ],
+    "nivelDeRiesgo": "TOLERABLE",
+    "medidasPreventivas": {
+      "debes": "Llevar a cabo la actividad progresivamete para que sirva en si misma de calentamiento evitando sobreesfuerzos repentinos.",
+      "noPuedes": "Permitir largas duraciones con exposición al sol o al frio.",
+      "condiciones": "Comprobar la idoneidad de la zona de realización de la dinámica con antelación: regularidad, espacio suficiente, pendiente, limpieza, etc..\nAsegurarse de la suficiente distancia de las tomas de electricidad y de los aparatos electricos usados, etc"
+    }
+  },
+  {
+    "id": 8,
+    "titulo": "RELATOS, CUENTA CUENTOS, TEATRALIZACIONES DE TEXTOS O CUENTOS",
+    "descripcion": "Conjunto de actividades de carácter descansado, tranquilo y sedentario que tienen por eje un relato.\nLa participación de los Scouts es mayor o menor dependiendo de la dinámica y estrategia metodológica elegida en cada caso y va desde su la audición de relatos contados por uno o varios adultos, en formato de audiencia pasiva y con mayor o menor ambientación -mera asistencia pasiva  y escucha del relato-, hasta la teatralización activa del relato junto al cuenta cuentos, pasando por dinámicas consistentes en su propia construcción.",
+    "caracteristicas": [
+      "Actividad relajada y descansada con frecuencia incluso pasiva y sedentaria.",
+      "Ambientación.",
+      "Corta duración.",
+      "Pequeño grupo.",
+      "Ejemplos:\nLecturas del libro de la selva\nCuentos nocturnos\nImprovisaciones\nConstrucciones de relatos entre todos\nCuenta cuentos ambientados\nRelatos de miedo en la velada.\nJuego de las 50 preguntas sobre relatos de  misterio"
+    ],
+    "nivelDeRiesgo": "TOLERABLE",
+    "medidasPreventivas": {
+      "debes": "Asegurarte de\n- la suficiente comodidad de los participantes.\n- la estabilidad del mobiliario.",
+      "noPuedes": "Permitir largas duraciones en la actividad (y menos con exposición al sol o al frio).",
+      "condiciones": "Asegurarse de la suficiente distancia de las tomas de electricidad y de los aparatos electricos usados, etc."
+    }
+  },
+  {
+    "id": 9,
+    "titulo": "JUEGOS DE KIM",
+    "descripcion": "Juegos relacionados con el uso de los sentidos y la memoria (vista , olfato, etc..) \nPueden tener formato de gran juego, de Ghynkhana, de prueba dentro de otro juego (pistas, kermesse, puestos, etc..), etc..\nEl clásico, primero de ellos (y que da nombre a esta modalidad de juegos) y en el que están basados los demás es el que aparece en la novela “Kim de la india” como entrenamiento del protagonista en sus labores de espionaje consistente en memorizar los objetos expuestos en una bandeja durante un corto espacio de tiempo con modalidades como quitar uno de ellos, sustituirlo, añadirlo, etc..\nOtros juegos de Kim son el del reproducir un dibujo a distancia de memoria, reconocer objetos por el tacto, reconocer olores, sabores, sonidos, etc..",
+    "caracteristicas": [
+      "Las características de estos juegos dependen de su uso en el marco que sea, de tal modo que si son parte de un concurso o pruebas de un juego pueden conllevar competitividad.",
+      "Generalmente se trata de dinámicas tranquilas, incluso sedentarias momentáneamente.",
+      "Implican manipulación en muchas ocasiones.",
+      "Corta duración de cada prueba.",
+      "Las pruebas se pasan individualmente.",
+      "Un componente esencial característico de este tipo de dinámicas es el elemento sorpresa (que los Scouts no saben que se van a encontrar) pues a veces se hace con los ojos vendados o limitando alguno de los sentidos.",
+      "Los participantes van solos de una prueba a otra a menudo (en estos espacios no hay control directo)."
+    ],
+    "nivelDeRiesgo": "TOLERABLE",
+    "medidasPreventivas": {
+      "debes": "Control previo de alergias y observaciones médicas de los participantes",
+      "noPuedes": "Diseñar ni permitir pruebas que puedan poner en peligro la integridad física de los participantes ni generar reacciones bajo el pretexto de la sorpresa: sabores picantes, olores pestilentes o fuertes (amoniaco, etc..), sustancias asquerosas, animales vivos, tóxicos al tacto, venenosos al gusto o aspirados, potenciales alérgenos, cortantes, punzantes, ácidos, cáusticos, explosivos, combustibles, reactivos al contacto con la piel, etc... Así como sus combinaciones y reacciones químicas.",
+      "condiciones": "Botiquín en las proximidades\nTeléfono del servicio de asistencia farmacológica y tóxica"
+    }
+  },
+  {
+    "id": 10,
+    "titulo": "FESTIVAL DE LA CANCIÓN",
+    "descripcion": "Gran actividad consistente en la reunión de varios grupos scouts en la que se suceden las actuaciones de coros formados por los Scouts con sus educadores, intercaladas con actuaciones, animaciones, presentaciones, etc..\nEs una gran velada que se lleva a cabo en algún espacio de dimensiones amplias (suficientes para las actuaciones, los grupos en espera y animando, etc..) que lleva aparejado un programa de actividades paralelas y adjetivas (la llegada y recepción al lugar en que se lleva a cabo, la acampada o alojamiento, las actividades educativas de antes y después del festival, etc..).",
+    "caracteristicas": [
+      "Encuentro multitudinario (más de 100 personas y en algunos casos hasta 900).",
+      "En ocasiones tiene carácter competitivo (Certamen o concurso)",
+      "Larga duración (una mañana o una tarde)",
+      "Celebrado en una instalación amplia: polideportivo, plaza de toros, etc..",
+      "Todas las secciones.",
+      "Supone traslado pues todos los grupos (participantes o no en el festival como grupos cantantes) van a un solo lugar.",
+      "Aunque internamente se organizan en secciones se acude como grupo, que a todos los efectos suele ser la célula de organización de la actividad.",
+      "Implica acceso hasta el lugar de celebración (andando, en vehículo de transporte escolar, etc..)"
+    ],
+    "nivelDeRiesgo": "TOLERABLE",
+    "medidasPreventivas": {
+      "debes": "Antes (con antelación, durante la fase de preparativos)\n.- Conocer exhaustivamente con carácter previo (el Coordinador de la actividad) el Plan de seguridad de la instalación y evacuación en su caso  y adoptar las medidas que tras ello considere oportunas: coordinación con monitores, retén de seguridad, refuerzo de recursos, revisión de instalaciones, recorridos previos, etc. \n.- en caso de no disponer de uno establecer un plan de evacuación y darlo difusión.\n.- Diseño de plan de actuación para caso de pérdida de menores.\n.- Avisar previamente a los grupos asistentes de la duración y horario previsto a efectos de que lleven ropa adecuada (sobre todo para los pequeños), así como hidratación necesaria. \n.- establecer Puntos de encuentro prefijados para caso de pérdidas.\n.- Consulta previa de la climatología prevista.\n.- disponer de Plan alternativo (con otra instalación) para caso de climatología adversa\n.- Organización adecuada de traslado, acceso, entrada y salida.\n.- Las autoridades estarán avisadas de la gran aglomeración prevista.\nInmediatamente antes:\n.- comprobación de estabilidad de escenario y decorados, bafles, etc..\n.- verificar al menos visualmente la instalación eléctrica (charcos, enchufes, etc..) \n.- reunión previa de coordinación con los responsables de los grupos para aclarar temas de seguridad y coordinación de respuesta de emergencia así como para dar las instrucciones de seguridad necesarias y obligatorias.\n.- en la aproximación se respetarán escrupulosamente las normas de seguridad vial y se establecerán medidas extraordinaria para movimiento de grandes colectivos (aviso a autoridades, chalecos reflectantes, voluntarios de apoyo a tráfico y movilidad, etc..)\nDurante:\n.- Todos los participantes llevarán su pañoleta para identificar grupo de pertenencia.\n.- Recuento obligatorio a la entrada por parte de cada responsable de sección.\n.-acceso constante a agua potable e Hidratación periódica (evita deshidratación y viajes descontrolados a los servicios)\n.- Actividades de animación movidas para desentumecer (bailes, canciones, animaciones..) -evita daños ergonómicos y enfriamientos-\n.- Abrigo a medida que avance la tarde / prenda de cabeza y protección solar… en cada caso.\n.- Se contará con servicios de emergencia, botiquín, etc. \n.- Medidas de especial atención a los participantes de menor edad o con Necesidades Educativas Especiales (discapacidades, etc..)\n.- Los monitores acompañantes van comunicados con la organización para hacer frente a cualquier situación de crisis",
+      "noPuedes": "Prohibición expresa de pérdida de control visual a NINGUN menor de edad por parte de sus monitores durante el desarrollo de la actividad.\n.- prohibición de carreras en zonas de paso y accesos a escenario.\n.- prohibición de líquidos en zonas eléctricas (escenario principalmente)\n.- prohibición de salida del recinto durante la actividad",
+      "condiciones": "Coordinación unipersonal (referente concreto-coordinador con expresas atribuciones en materia de seguridad)\nControl previo de observaciones médicas y alergias de los participantes\nDisponibilidad de botiquín completo en las proximidades\nTeléfono del servicio de asistencia farmacológica y tóxica \nCoordinación con ayuntamiento, 112, delegación de gobierno en su caso, guardia civil o policía local, etc.."
+    }
+  },
+  {
+    "id": 11,
+    "titulo": "FESTIVAL DE NAVIDAD",
+    "descripcion": "Actividad de grupo consistente en la reunión de todas las secciones scouts en la que se suceden las actuaciones y representaciones de estas formadas por los Scouts con sus educadores. Se intercalan con animaciones, presentaciones, etc.\nEs una gran velada que se lleva a cabo en algún espacio habilitado y de dimensiones suficientemente amplias (suficientes para las actuaciones, los grupos en espera y animando, etc.) como un teatro, un salón de actos, una sala de proyecciones, etc.",
+    "caracteristicas": [
+      "Se suele celebrar de cara a las Navidades como acto final del año en el grupo.",
+      "Encuentro grande (todo el grupo incluyendo a los padres)",
+      "Duración media (dos horas aprox.)",
+      "Celebrado en una instalación al efecto (teatro, salón  de actos...)",
+      "Todas las secciones del grupo y padres de los Scouts.",
+      "Hay una cierta falta de claridad en cuanto a la responsabilidad sobre los menores al estar presentes en la  actividad los propios padres y sus educadores. En principio ha de concebirse como actividad del grupo a la que los padres acuden como asistentes/invitados."
+    ],
+    "nivelDeRiesgo": "TOLERABLE",
+    "medidasPreventivas": {
+      "debes": ".- Conocer exhaustivamente con carácter previo (el coordinador de la actividad) el plan de seguridad de la instalación y evacuación en su caso  y adoptar las medidas que tras ello considere oportunas: coordinación con monitores, responsable de de seguridad, refuerzo de recursos, revisión de instalaciones, recorridos previos, despeje de vías, comprobación de estabilidad de mobiliario y de viabilidad de pasillos y zonas de paso, etc. \n.- en caso de no disponer de uno establecer un plan de evacuación y darlo difusión.\nInmediatamente antes:\n.- comprobación de estabilidad de escenario y decorados, bafles, etc.\n.- verificar al menos visualmente la instalación eléctrica (charcos, enchufes, etc.) \nDurante:\n.- recuento obligatorio a la entrada por parte de cada responsable de sección.\n.- medidas de especial atención a los participantes de menor edad o con necesidades educativas especiales (discapacidades, etc..)",
+      "noPuedes": ".- Prohibición de carreras en zonas de paso los accesos a escenario.\n.- prohibición de líquidos en zonas eléctricas (escenario principalmente)\n.- prohibición de salida del recinto durante la actividad",
+      "condiciones": "Coordinación unipersonal (referente concreto-coordinador con expresas atribuciones en materia de seguridad)\nDisponibilidad de botiquín completo en las proximidades"
+    }
+  },
+  {
+    "id": 12,
+    "titulo": "JUEGOS DE INTERIOR",
+    "descripcion": "Juegos de sala o local de sección.\nSon los pequeños juegos que se suelen llevar a cabo en los locales de sección en las bases de los grupos. Se usan con frecuencia como dinámicas bisagra fuera de programación para romper programas demasiado formales o para cambiar de una actividad más o menos seria a otra sin que ello signifique que no puedan ser usadas en sí mismas como dinámicas con finalidad educativa para la que están muy indicados.\nHay varias modalidades. Las fichas 56, 59 y 60 (juegos de habitación, juegos sedentarios no del todo estáticos y juegos de mesa) desarrollan específicamente algunos de ellos en el ámbito de actividades en albergues e instalaciones (en acampadas y salidas). \nEn esta ficha hacemos la evaluación genérica para todos ellos sin especialidades ni concreciones y sobre todo nos centramos en las llevadas a cabo en el marco de las reuniones de los sábados (entorno urbano) aunque comparten gran parte de las circunstancias con los citados.\nHay que distinguirlos de los juegos de edificio pues estos se llevan a cabo en varias dependencias del mismo y sin embargo los de interior son juegos de una sola sala.",
+    "caracteristicas": [
+      "Actividad de interior llevada a cabo en una sola sala (sin salir de la misma –al menos el grupo entero-) generalmente no muy grande (sala de reuniones de la sección).",
+      "La postura de la mayor parte de los participantes es sedentaria.",
+      "Son dinámicas tranquilas.",
+      "POSIBLES EJEMPLOS Y VARIEDADES:\nJuegos de KIM: P.E. el  de salir uno de la sala y decir quien se ha cambiado de lugar.\nJuegos de mesa: Yenga, \nMinidanzas y juegos rítmicos: Presi, Presi..\nOtros: teléfono estropeado, telegrama, películas, etc.\nEspeciales: sin luz: Tinieblas…"
+    ],
+    "nivelDeRiesgo": "TOLERABLE",
+    "medidasPreventivas": {
+      "debes": "Asegurarte de que los materiales de fortuna usados (mobiliario sobre todo) no revistan peligrosidad (puntas sobresalientes, sujeción, etc.) – revisiones periódicas, sustitución de materiales viejos-\nAsegurarse de la estabilidad del mobiliario (mesas, bancos, sillas...) Y de que la zona de juegos esté libre para evitar tropiezos y caídas.",
+      "noPuedes": "Llevar a cabo actividades demasiado físicas y dinámicas que supongan posibilidad alta de golpearse contra el mobiliario, marcos, paredes, techo, hacerse daño por exceso de carga, tirones, etc.\nLlevar a cabo dinámicas con materiales peligrosos (potencialmente explosivos, combustibles, reactivos, etc.)",
+      "condiciones": "Duración no excesiva para evitar aburrimiento, variedad y alternancia, cambio de postura, etc.\nNinguna específica para este tipo de actividades salvo las indicadas como generales para las reuniones."
+    }
+  },
+  {
+    "id": 13,
+    "titulo": "DINÁMICAS DE GRUPO",
+    "descripcion": "Dinámicas generalmente sedentarias usadas en sala de reuniones (local de sección habitualmente) de manera dirigida –por uno o varios educadores- con clara intencionalidad finalística y educativa como trabajar la cohesión interna del grupo, un contenido o aprendizaje concreto, hacer reflexionar a sus miembros, etc.\nSuelen ser dinámicas concretas contrastadas por la práctica y extraídas de manuales al efecto o de la experiencia/formación de los educadores.\nHay especialidades según dinámicas concretas que trataremos en su respectiva ficha (juegos límite, juegos de rol, juegos colaborativos, etc.).\nEl esquema habitual es trabajo en grupo con aprendizaje e interiorización individual y posterior puesta en común o reflexión.",
+    "caracteristicas": [
+      "Gran variedad de dinámicas (tantas o más que finalidades educativas que se pueden trabajar con ellas).",
+      "Actividad de interior llevada a cabo en una sola sala (sin salir de la misma –al menos el grupo entero-) generalmente no muy grande (sala de reuniones de la sección).",
+      "A menudo tienen apoyo de elementos materiales auxiliares, generalmente fichas de trabajo, documentación, textos, imágenes...",
+      "La postura de la mayor parte de los participantes es sedentaria.",
+      "Son dinámicas tranquilas.",
+      "POSIBLES EJEMPLOS Y VARIEDADES:\nVentana de Yohari, Pecera de observación, Phillips 6x6, DAFO, resolución de problemas por Brainstorming, etc.\nTests: Test del avestruz, role play, etc.\nDinámicas sobre textos: La Cajera, el refugio atómico, la isla desierta, la construcción de la pirámide, el ovillo, etc."
+    ],
+    "nivelDeRiesgo": "TOLERABLE",
+    "medidasPreventivas": {
+      "debes": "Continua presencia del educador/director de la dinámica\nAsegurarte de que los materiales de fortuna usados (mobiliario sobre todo) no revistan peligrosidad (puntas sobresalientes, sujeción, etc..) – revisiones periódicas, sustitución de materiales viejos-\nAsegurarse de la estabilidad del mobiliario (mesas, bancos, sillas...) Y de que la zona de juegos esté libre para evitar tropiezos y caídas\n",
+      "noPuedes": "Llevar a cabo actividades demasiado físicas y dinámicas que supongan posibilidad alta de golpearse contra el mobiliario, marcos, paredes, techo, hacerse daño por exceso de carga, tirones, etc.\nLlevar a cabo dinámicas con materiales peligrosos (potencialmente explosivos, combustibles, reactivos, etc.)",
+      "condiciones": "Duración no excesiva para evitar aburrimiento, variedad y alternancia, cambio de postura, etc.\nNinguna específica para este tipo de actividades salvo las indicadas como generales para las reuniones."
+    }
+  },
+  {
+    "id": 14,
+    "titulo": "TALLERES DE MANUALIDADES (EN LOS LOCALES)",
+    "descripcion": "Se entiende por taller la dinámica didáctica a través de la que los participantes  adquieren aprendizajes mediante la MANIPULACIÓN de elementos materiales (Lo que se aprende se aprende por la acción y además exige manipulación de materiales, no cabe taller meramente teórico sin la intervención activa del participante y sin TOCAR materiales concretos: cuero, pintura, trabajos manuales, carteras, voladores, adornos de papel, pulseras, etc.).\nEllo hace de este tipo de actividades las más apropiadas para poner en práctica el “aprender haciendo” que es base del escultismo.\nGeneralmente culminan con que el participante se lleva el fruto de su trabajo, algo concreto y palpable (aunque no siempre es así: talleres de fogatería, primeros auxilios, etc.)…\nEn esta ficha abordamos los talleres de manualidades en general y además hacemos referencia primero a los talleres de interior, los llevados a cabo en los locales de grupo y sección durante las reuniones a lo largo de la ronda con lo que ello implica.\nEn la ficha 28 se desarrollan los talleres llevados a cabo en exteriores en la naturaleza (acampadas y campamentos) de manera separada por las especialidades que conlleva este rasgo.",
+    "caracteristicas": [
+      "Actividad de interior llevada a cabo en una sola sala generalmente no muy grande (sala de reuniones de la sección).",
+      "La postura de la mayor parte de los participantes es sedentaria.",
+      "Son dinámicas tranquilas.",
+      "Exige MANIPULACIÓN por parte de los participantes.",
+      "Culminan con un resultado material concreto (carteras de cuero, cuadros de nudos, jabón, lámpara, adorno, máscara, etc.) que habitualmente se llevan los propios participantes que lo han confeccionado, etc..",
+      "POSIBLES EJEMPLOS Y VARIEDADES:\nUsos de material reutilizado.\nColgadores.\nBotes de bolígrafos.\nCuadros de nudos.\nFlores secas.\nFundas de móvil.\nPulseras.\nAbalorios.\nCarteras, etc.."
+    ],
+    "nivelDeRiesgo": "TOLERABLE",
+    "medidasPreventivas": {
+      "debes": "Consultar previamente el cuadro de alergias y observaciones médicas.\nEstablecer claramente unas normas de seguridad para el taller previamente adaptadas a cada caso y explicárselas antes de empezar a los participantes.\nAsegurarte de que los materiales de fortuna usados (mobiliario sobre todo) no revistan peligrosidad (puntas sobresalientes, sujeción, etc.) – revisiones periódicas, sustitución de materiales viejos-\nAsegurarse de la estabilidad del mobiliario (mesas, bancos, sillas...) Y de que la zona de juegos esté libre para evitar tropiezos y caídas.",
+      "noPuedes": "Permitir la manipulación de herramientas o elementos potencialmente dañinos a participantes sin la debida atención personalizada y concreta.\nDejar sueltos estos elementos por la zona de trabajo de modo que el acceso a los mismos sea libre.",
+      "condiciones": "Duración no excesiva para evitar aburrimiento, variedad y alternancia, cambio de postura, etc."
+    }
+  },
+  {
+    "id": 15,
+    "titulo": "CHARLAS",
+    "descripcion": "Actividad generalmente de interior y sedentaria desarrollada de manera habitual en los locales, consistente en la escucha pasiva por parte de los participantes de la exposición realizada por un ponente sobre un tema.\nDinámica con formato directivo y unidireccional en su mayor parte (sesión magistral, etc.).\nLa participación de los asistentes suelen reducirse a preguntas al final salvo que la dinámica de la charla sea más abierta (tipo tertulia).\nPretende acercar de manera directa e inmediata los contenidos concretos. Es la metodología formativa más rápida en cuanto a la rentabilidad tiempo/contenidos pero no es la más adecuada en el marco del escultismo pues prácticamente anula el “aprender haciendo”. Ha de ser usada lo menos posible, por causas de rentabilidad (por ejemplo si hay poco tiempo disponible), en conjunción con otras dinámicas (talleres, un debate, etc.) o como preámbulo a otra actividad (Por ejemplo una charla de seguridad antes de una marcha).\nEn ocasiones se apoya en presentaciones, visionados de imágenes, etc. (y mas puntualmente en otros soportes: audiciones, lectura de textos, películas, documentales, etc.).",
+    "caracteristicas": [
+      "Actividad directiva y unidireccional",
+      "Sedentaria normalmente y con distribución concreta (ponente enfrente de oyentes.",
+      "Pasiva desde el punto de vista del participante.",
+      "A veces apoyada por medios técnicos de exposición (PowerPoint, etc.)"
+    ],
+    "nivelDeRiesgo": "TOLERABLE",
+    "medidasPreventivas": {
+      "debes": "",
+      "noPuedes": "",
+      "condiciones": "Buscar las condiciones ergonómicas adecuadas (postura, duración de la actividad, distribución, comodidad, luz...)\nLas actividades sedentarias de duración superior a una hora no deben hacerse al sol si ello es posible. En caso contrario acceso a agua, crema solar, gorra, etc.\nMovimientos periódicos de desentumecimiento si no hay garantías de comodidad."
+    }
+  }
+]
