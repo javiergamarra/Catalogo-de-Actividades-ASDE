@@ -3,6 +3,7 @@ package com.nhpatt.asde.mvp.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.test.espresso.IdlingResource;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,10 +22,12 @@ import java.util.List;
  * @author Hugo Nebreda
  */
 public class EventListFragment extends AbstractFragment<EventListPresenter>
-        implements EventListPresenter.EventListView, EventListener {
+        implements EventListPresenter.EventListView, EventListener, IdlingResource {
 
     private RecyclerView eventRecyclerView;
     private View progressList;
+    private ResourceCallback callback;
+    private boolean idle = false;
 
     @Nullable
     @Override
@@ -51,17 +54,38 @@ public class EventListFragment extends AbstractFragment<EventListPresenter>
     public void show(final List<Event> events) {
         progressList.setVisibility(View.GONE);
         eventRecyclerView.setAdapter(new EventsAdapter(events, this));
+        idle = true;
     }
 
     @Override
     public void showError(String message) {
+
         progressList.setVisibility(View.GONE);
         super.showError(message);
+        idle = true;
     }
 
     @Override
     public void click(Event event) {
         ((MainActivity) getActivity()).goToDetail(event);
+    }
+
+    @Override
+    public String getName() {
+        return getClass().getName();
+    }
+
+    @Override
+    public boolean isIdleNow() {
+        if (idle && callback != null) {
+            callback.onTransitionToIdle();
+        }
+        return idle;
+    }
+
+    @Override
+    public void registerIdleTransitionCallback(ResourceCallback callback) {
+        this.callback = callback;
     }
 }
 
