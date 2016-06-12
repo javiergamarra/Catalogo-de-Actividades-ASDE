@@ -36,6 +36,7 @@
                 android:id="@+id/fragment_placeholder"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
+
         </RelativeLayout>
 
     </android.support.design.widget.CoordinatorLayout>
@@ -47,6 +48,7 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/drawer_header"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
         app:menu="@menu/drawer_view" />
 
 </android.support.v4.widget.DrawerLayout>
