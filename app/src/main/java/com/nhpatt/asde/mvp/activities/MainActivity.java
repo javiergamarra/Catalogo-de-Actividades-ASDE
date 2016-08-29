@@ -17,10 +17,11 @@ import com.nhpatt.asde.models.Event;
 import com.nhpatt.asde.mvp.fragments.EventDetailsFragment;
 import com.nhpatt.asde.mvp.fragments.EventListFragment;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, FragmentManager.OnBackStackChangedListener {
 
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
+    private ActionBarDrawerToggle toggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +32,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setSupportActionBar(toolbar);
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        test();
         drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -42,6 +41,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (savedInstanceState == null) {
             onNavigationItemSelected(navigationView.getMenu().getItem(0));
         }
+
+        getSupportFragmentManager().addOnBackStackChangedListener(this);
+    }
+
+    private void test() {
+        toggle = new ActionBarDrawerToggle(
+                this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+
+        toggle.syncState();
     }
 
     @Override
@@ -98,4 +106,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
     }
 
+    @Override
+    public void onBackStackChanged() {
+        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        } else {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+            test();
+        }
+    }
 }

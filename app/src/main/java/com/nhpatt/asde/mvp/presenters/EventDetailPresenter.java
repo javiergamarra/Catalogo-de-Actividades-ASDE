@@ -8,7 +8,7 @@ import rx.Observable;
 /**
  * @author Javier Gamarra
  */
-public class EventDetailPresenter extends PresenterImpl {
+public class EventDetailPresenter extends FragmentPresenterImpl {
 
     private final EventDetailView eventDetailView;
 

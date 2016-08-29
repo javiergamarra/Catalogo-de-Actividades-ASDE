@@ -3,18 +3,23 @@ package com.nhpatt.asde.mvp.fragments;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
+import android.support.test.espresso.IdlingResource;
 import android.support.v4.app.Fragment;
 import android.view.View;
 
-import com.nhpatt.asde.mvp.presenters.Presenter;
+import com.nhpatt.asde.mvp.presenters.BaseView;
+import com.nhpatt.asde.mvp.presenters.FragmentPresenterImpl;
 
 
-public abstract class AbstractFragment<P extends Presenter> extends Fragment {
+public abstract class AbstractFragment<P extends FragmentPresenterImpl> extends Fragment implements IdlingResource, BaseView {
 
     protected boolean destroyedBySystem;
     private P presenter;
     private RetainedFragment retainFragment;
     private String tag = getClass().getCanonicalName();
+
+    private IdlingResource.ResourceCallback callback;
+    private boolean idle = false;
 
     protected P getPresenter() {
         return presenter;
@@ -22,9 +27,16 @@ public abstract class AbstractFragment<P extends Presenter> extends Fragment {
 
     protected abstract P createPresenter();
 
-    public void showError(String message) {
+    @Override
+    public void onSuccess() {
+        idle = true;
+    }
+
+    @Override
+    public void onError(String error) {
         View content = getView().findViewById(android.R.id.content);
-        Snackbar.make(content, message, Snackbar.LENGTH_LONG).show();
+        Snackbar.make(content, error, Snackbar.LENGTH_LONG).show();
+        idle = true;
     }
 
     @Override
@@ -32,7 +44,6 @@ public abstract class AbstractFragment<P extends Presenter> extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         presenter = createPresenter();
-        presenter.setFragment(true);
         presenter.onCreate(savedInstanceState);
 
         retainFragment = RetainedFragment.findOrCreate(getFragmentManager(), tag);
@@ -82,6 +93,24 @@ public abstract class AbstractFragment<P extends Presenter> extends Fragment {
         }
         super.onDestroy();
         presenter.onDestroy();
+    }
+
+    @Override
+    public String getName() {
+        return getClass().getName();
+    }
+
+    @Override
+    public boolean isIdleNow() {
+        if (idle && callback != null) {
+            callback.onTransitionToIdle();
+        }
+        return idle;
+    }
+
+    @Override
+    public void registerIdleTransitionCallback(ResourceCallback callback) {
+        this.callback = callback;
     }
 
 }
