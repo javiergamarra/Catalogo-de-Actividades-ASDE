@@ -33,6 +33,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 public class ListEventTests {
 
     public static final String SAMPLE_ACTIVITY = "JUEGOS ROMPEHIELOS";
+
     @Rule
     public ActivityTestRule<MainActivity> activityTestRule = new ActivityTestRule(MainActivity.class);
     private EventListFragment eventListFragment;
