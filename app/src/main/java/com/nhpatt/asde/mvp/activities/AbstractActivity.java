@@ -2,12 +2,15 @@ package com.nhpatt.asde.mvp.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
+import android.support.test.espresso.IdlingResource;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.nhpatt.asde.mvp.presenters.ActivityPresenterImpl;
+import com.nhpatt.asde.mvp.presenters.BaseView;
 import com.nhpatt.asde.mvp.presenters.Presenter;
 
-public abstract class AbstractActivity<P extends Presenter> extends AppCompatActivity {
+public abstract class AbstractActivity<P extends ActivityPresenterImpl> extends AppCompatActivity implements IdlingResource, BaseView {
 
     private P presenter;
 

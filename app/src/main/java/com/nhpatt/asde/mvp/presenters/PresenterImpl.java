@@ -1,28 +1,18 @@
 package com.nhpatt.asde.mvp.presenters;
 
-import android.os.Bundle;
 import android.support.annotation.CheckResult;
 import android.support.annotation.NonNull;
 
 import com.nhpatt.asde.mvp.activities.PersistedObject;
-import com.trello.rxlifecycle.ActivityEvent;
-import com.trello.rxlifecycle.ActivityLifecycleProvider;
-import com.trello.rxlifecycle.FragmentEvent;
-import com.trello.rxlifecycle.FragmentLifecycleProvider;
 import com.trello.rxlifecycle.LifecycleTransformer;
-import com.trello.rxlifecycle.RxLifecycle;
 
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
-import rx.subjects.BehaviorSubject;
 
-public class PresenterImpl implements Presenter, ActivityLifecycleProvider, FragmentLifecycleProvider {
+public abstract class PresenterImpl implements Presenter {
 
-    private final BehaviorSubject<ActivityEvent> activityLifecycleEvent = BehaviorSubject.create();
-    private final BehaviorSubject<FragmentEvent> fragmentLifecycleEvent = BehaviorSubject.create();
     private PersistedObject persistedObject = new PersistedObject();
-    private boolean isFragment;
 
     protected Observable getCachedObservable(String key, Observable observable) {
         if (getPersistedObject().getInteractors().containsKey(key)) {
@@ -49,86 +39,7 @@ public class PresenterImpl implements Presenter, ActivityLifecycleProvider, Frag
                 .autoConnect();
     }
 
-    @Override
-    @NonNull
-    @CheckResult
-    public final Observable lifecycle() {
-        return isFragment ? fragmentLifecycleEvent.asObservable() : activityLifecycleEvent.asObservable();
-    }
-
-    @NonNull
-    @Override
-    public <T> LifecycleTransformer<T> bindUntilEvent(@NonNull FragmentEvent event) {
-        return RxLifecycle.bindUntilEvent(fragmentLifecycleEvent, event);
-    }
-
-    @Override
-    @NonNull
-    @CheckResult
-    public final <T> LifecycleTransformer<T> bindUntilEvent(@NonNull ActivityEvent event) {
-        return RxLifecycle.bindUntilEvent(activityLifecycleEvent, event);
-    }
-
-    @Override
-    @NonNull
-    @CheckResult
-    public final <T> LifecycleTransformer<T> bindToLifecycle() {
-        return isFragment ? RxLifecycle.bindFragment(fragmentLifecycleEvent) : RxLifecycle.bindActivity(activityLifecycleEvent);
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        if (isFragment) {
-            fragmentLifecycleEvent.onNext(FragmentEvent.CREATE_VIEW);
-        } else {
-            activityLifecycleEvent.onNext(ActivityEvent.CREATE);
-        }
-    }
-
-    @Override
-    public void onStart() {
-        if (isFragment) {
-            fragmentLifecycleEvent.onNext(FragmentEvent.START);
-        } else {
-            activityLifecycleEvent.onNext(ActivityEvent.START);
-        }
-    }
-
-    @Override
-    public void onResume() {
-        if (isFragment) {
-            fragmentLifecycleEvent.onNext(FragmentEvent.RESUME);
-        } else {
-            activityLifecycleEvent.onNext(ActivityEvent.RESUME);
-        }
-    }
-
-    @Override
-    public void onPause() {
-        if (isFragment) {
-            fragmentLifecycleEvent.onNext(FragmentEvent.PAUSE);
-        } else {
-            activityLifecycleEvent.onNext(ActivityEvent.PAUSE);
-        }
-    }
-
-    @Override
-    public void onStop() {
-        if (isFragment) {
-            fragmentLifecycleEvent.onNext(FragmentEvent.STOP);
-        } else {
-            activityLifecycleEvent.onNext(ActivityEvent.STOP);
-        }
-    }
-
-    @Override
-    public void onDestroy() {
-        if (isFragment) {
-            fragmentLifecycleEvent.onNext(FragmentEvent.DESTROY);
-        } else {
-            activityLifecycleEvent.onNext(ActivityEvent.DESTROY);
-        }
-    }
+    abstract <T> LifecycleTransformer<T> bindToLifecycle();
 
     @Override
     public PersistedObject getPersistedObject() {
@@ -142,11 +53,5 @@ public class PresenterImpl implements Presenter, ActivityLifecycleProvider, Frag
     public void setPersistedObject(PersistedObject persistedObject) {
         this.persistedObject = persistedObject;
     }
-
-    @Override
-    public void setFragment(boolean isFragment) {
-        this.isFragment = isFragment;
-    }
-
 
 }

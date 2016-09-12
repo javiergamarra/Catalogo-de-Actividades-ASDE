@@ -11,7 +11,7 @@ import rx.Observable;
  * @author Hugo Nebreda
  */
 
-public class EventListPresenter extends PresenterImpl {
+public class EventListPresenter extends FragmentPresenterImpl {
 
     public static final String KEY = "EVENTS";
     private final EventListView eventListView;
@@ -27,17 +27,16 @@ public class EventListPresenter extends PresenterImpl {
 
     public void errorRetrievingInfo(Throwable throwable) {
         invalidateObservable("EVENTS");
-        eventListView.showError("Error retrieving list of items");
+        eventListView.onError("Error retrieving list of items");
     }
 
     public void eventListRetrieved(List<Event> object) {
-        eventListView.show(object);
+        eventListView.onSuccess(object);
     }
 
-    public interface EventListView {
-        void show(List<Event> eventList);
+    public interface EventListView extends BaseView {
 
-        void showError(String message);
+        void onSuccess(List<Event> events);
     }
 
 }
